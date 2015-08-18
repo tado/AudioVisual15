@@ -10,6 +10,9 @@ void ofApp::setup(){
     post->init(ofGetWidth(), ofGetHeight());
     bloom = post->createPass<BloomPass>();
     bloom->setEnabled(true);
+    
+    fx = new ofxSCSynth("fx_allpass");
+    fx->create();
 }
 
 //--------------------------------------------------------------

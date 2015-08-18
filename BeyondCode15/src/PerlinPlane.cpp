@@ -14,7 +14,7 @@ PerlinPlane::PerlinPlane(){
     int height = 1080;
     unsigned char pixels[width * height];
     
-    for (int i = 0; i < width * height; i += 48){
+    for (int i = 0; i < width * height; i += 24){
         pixels[i] = pixels[i+1] = pixels[i+2] = 255;
         if (i % 2 == 0) {
             pixels[i + 3] = 255;
@@ -36,13 +36,18 @@ PerlinPlane::PerlinPlane(){
     }
     
     noiseScale = ofRandom(1.0, 4.0);
-    shiftSpeed = ofRandom(0.1, 0.3);
-    noiseStrength = ofRandom(100, 400);
-    rotSpeed = ofRandom(0.1);
+    shiftSpeed = ofRandom(0.1, 1.0);
+    noiseStrength = ofRandom(100, 200);
+    rotSpeed = ofRandom(1.0);
     rotation = ofRandom(180);
     fade = 0.0;
     fadeSpeed = 0.001;
     color.setHsb(ofRandom(255), 48, 100);
+    
+    synth = new ofxSCSynth("moog");
+    synth->set("nth", int(ofRandom(5)));
+    synth->set("cutoff", ofRandom(20, 500));
+    synth->create();
 }
 
 void PerlinPlane::update(){

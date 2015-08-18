@@ -1,5 +1,6 @@
 #pragma once
 #include "ofMain.h"
+#include "ofxSuperCollider.h"
 
 class PerlinPlane {
 public:
@@ -24,4 +25,6 @@ public:
     float fade;
     float fadeSpeed;
     ofColor color;
+    
+    ofxSCSynth *synth;
 };

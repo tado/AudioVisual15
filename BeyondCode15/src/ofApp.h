@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "PerlinPlane.h"
 #include "ofxPostProcessing.h"
+#include "ofxSuperCollider.h"
 
 class ofApp : public ofBaseApp{
     
@@ -26,4 +27,6 @@ public:
     
     ofxPostProcessing *post;
     BloomPass::Ptr bloom;
+    
+    ofxSCSynth *fx;
 };
