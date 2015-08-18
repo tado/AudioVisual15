@@ -8,15 +8,22 @@
 
 #include "PerlinPlane.h"
 
-PerlinPlane::PerlinPlane(){
+PerlinPlane::PerlinPlane(int _num, int _nth, int _cutoff){
+    num = _num;
+    nth = _nth;
+    cutoff = _cutoff;
+    
+    lived = true;
+    fadeIn = true;
+    
     name = "PerlinPlane";
     int width = 1920;
     int height = 1080;
     unsigned char pixels[width * height];
     
-    for (int i = 0; i < width * height; i += 24){
+    for (int i = 0; i < width * height; i += 12){
         pixels[i] = pixels[i+1] = pixels[i+2] = 255;
-        if (i % 2 == 0) {
+        if (i % 8 == 0) {
             pixels[i + 3] = 255;
         } else {
             pixels[i + 3] = 0;
@@ -24,7 +31,7 @@ PerlinPlane::PerlinPlane(){
     }
     tex.loadData(pixels, width / 4.0, height / 4.0, GL_RGBA);
     
-    mesh = ofSpherePrimitive(ofGetHeight()/2.0, 96).getMesh();
+    mesh = ofSpherePrimitive(ofGetHeight()/2.0, 32).getMesh();
     for (int i = 0; i < mesh.getVertices().size(); i++) {
         ofVec2f texCoord = mesh.getTexCoord(i);
         texCoord.x *= tex.getWidth();
@@ -35,18 +42,18 @@ PerlinPlane::PerlinPlane(){
         currentVertex.push_back(ofVec3f(mesh.getVertices()[i].x, mesh.getVertices()[i].y, mesh.getVertices()[i].z));
     }
     
-    noiseScale = ofRandom(1.0, 4.0);
-    shiftSpeed = ofRandom(0.1, 1.0);
-    noiseStrength = ofRandom(100, 200);
-    rotSpeed = ofRandom(1.0);
+    noiseScale = (nth + 1.0) * 0.75;
+    shiftSpeed = 0.5;
+    noiseStrength = 200;
+    rotSpeed = ofRandom(0.1, 0.3);
     rotation = ofRandom(180);
     fade = 0.0;
-    fadeSpeed = 0.001;
-    color.setHsb(ofRandom(255), 48, 100);
+    fadeSpeed = 0.1;
+    color.setHsb(ofRandom(255), 200, 100);
     
     synth = new ofxSCSynth("moog");
-    synth->set("nth", int(ofRandom(5)));
-    synth->set("cutoff", ofRandom(20, 500));
+    synth->set("nth", nth);
+    synth->set("cutoff", cutoff);
     synth->create();
 }
 
@@ -68,10 +75,19 @@ void PerlinPlane::update(){
     }
     
     rotation += rotSpeed;
-    fade += fadeSpeed;
-    if (fade > 1.0) {
-        fade = 1.0;
-    }
+    
+    if (fadeIn) {
+        fade += fadeSpeed;
+        if (fade > 1.0) {
+            fade = 1.0;
+        }
+    } else {
+        fade -= fadeSpeed;
+        if (fade < 0.0) {
+            lived = false;
+            fade = 0.0;
+        }
+    }    
 }
 
 void PerlinPlane::draw(){
@@ -84,4 +100,32 @@ void PerlinPlane::draw(){
     mesh.draw();
     ofPopMatrix();
     tex.unbind();
+}
+
+void PerlinPlane::exit(){
+    synth->free();
+}
+
+void PerlinPlane::keyPressed(int key){
+
+}
+
+void PerlinPlane::keyReleased(int key){
+    
+}
+
+void PerlinPlane::mouseMoved(int x, int y ){
+    
+}
+
+void PerlinPlane::mouseDragged(int x, int y, int button){
+    
+}
+
+void PerlinPlane::mousePressed(int x, int y, int button){
+    
+}
+
+void PerlinPlane::mouseReleased(int x, int y, int button){
+
 }

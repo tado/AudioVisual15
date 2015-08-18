@@ -11,6 +11,9 @@ public:
     void setup();
     void update();
     void draw();
+    void exit();
+    
+    void drawPerlin();
     
     void keyPressed(int key);
     void keyReleased(int key);
@@ -29,4 +32,6 @@ public:
     BloomPass::Ptr bloom;
     
     ofxSCSynth *fx;
+    
+    int mode;
 };
