@@ -4,7 +4,7 @@
 
 class PerlinPlane {
 public:
-    PerlinPlane(int num, int nth, int cutoff);
+    PerlinPlane(int num, int nth, int cutoff, float gain);
     void update();
     void draw();
     void exit();
@@ -19,6 +19,7 @@ public:
     int num;
     int nth;
     int cutoff;
+    float gain;
     
     bool lived;
     bool fadeIn;

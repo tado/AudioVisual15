@@ -19,12 +19,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    for (int i = 0; i < perlins.size(); i++) {
-        perlins[i]->update();
-        while (perlins[0]->lived == false) {
-            perlins.pop_front();
-        }
-    }
+
 }
 
 //--------------------------------------------------------------
@@ -40,11 +35,31 @@ void ofApp::draw(){
 }
 
 void ofApp::drawPerlin(){
+    //update
+    for (int i = 0; i < perlins.size(); i++) {
+        perlins[i]->update();
+        
+    }
+    if (perlins.size() > PERLIN_NUM) {
+        perlins[0]->synth->free();
+        perlins[0]->fadeIn = false;
+    }
+    if (perlins.size() > 1) {
+        while (perlins[0]->lived == false) {
+            perlins.pop_front();
+        }
+    }
+    
+    //draw
     post->begin(cam);
+    //cam.begin();
+    //ofEnableDepthTest();
     for (int i = 0; i < perlins.size(); i++) {
         perlins[i]->draw();
     }
+    //ofDisableDepthTest();
     post->end();
+    //cam.end();
     
     ofSetColor(255, 127);
     ofLine(0, mouseY, ofGetWidth(), mouseY);
@@ -87,14 +102,11 @@ void ofApp::mousePressed(int x, int y, int button){
 void ofApp::mouseReleased(int x, int y, int button){
     switch (mode) {
         case 0:
-            int nth = int(ofMap(y, 0, ofGetHeight(), 12, 0));
-            int cutoff = ofMap(abs(ofGetWidth() - x), 0, ofGetWidth() / 2.0, 20, 500);
-            PerlinPlane *p = new PerlinPlane(perlins.size(), nth, cutoff);
+            int nth = int(ofMap(y, 0, ofGetHeight(), 11, 0));
+            int cutoff = 500;
+            float gain = ofMap(abs(ofGetWidth()/2 - x), 0, ofGetWidth() / 2.0, 1.0, 3.9);
+            PerlinPlane *p = new PerlinPlane(perlins.size(), nth, cutoff, gain);
             perlins.push_back(p);
-            if (perlins.size() > 5) {
-                perlins[0]->synth->free();
-                perlins[0]->fadeIn = false;
-            }
             break;
     }
 }

@@ -1,10 +1,10 @@
 (
 SynthDef("moog", {
-	arg nth = 0, freq = 20, cutoff = 100, amp = 0.3, gain = 3.8;
+	arg nth = 0, freq = 20, cutoff = 100, amp = 0.5, gain = 3.0;
 	var in;
 	in = MoogFF.ar(
 		Pulse.ar([freq, freq * 1.01] * (1.5 ** nth), [0.3, 0.2]),
-		LFNoise1.kr([0.1, 0.12], 1.0, [3.0, 4.0]) * LFNoise1.kr([0.2, 0.3], cutoff, cutoff * 2.0),
+		LFNoise1.kr([0.5, 0.52], 1.0, [3.0, 4.0]) * LFNoise1.kr([1.2, 1.3], cutoff, cutoff * 1.5),
 		gain,
 		mul:amp
 	);
