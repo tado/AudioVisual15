@@ -50,7 +50,7 @@ PerlinPlane::PerlinPlane(int _num, int _nth, int _cutoff, float _gain){
     rotSpeed = ofRandom(0.1, 0.3);
     rotation = ofRandom(180);
     fade = 0.0;
-    fadeSpeed = 0.003;
+    fadeSpeed = 0.002;
     color.setHsb(ofRandom(255), 200, 255);
     
     synth = new ofxSCSynth("moog");
