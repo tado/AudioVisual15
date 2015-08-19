@@ -26,7 +26,7 @@ public:
     void gotMessage(ofMessage msg);
     ofEasyCam cam;
     
-    static const int PERLIN_NUM = 3;
+    static const int PERLIN_NUM = 5;
     deque<PerlinPlane *> perlins;
     
     ofxPostProcessing *post;
