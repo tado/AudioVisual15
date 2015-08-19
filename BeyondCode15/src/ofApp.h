@@ -33,6 +33,6 @@ public:
     BloomPass::Ptr bloom;
     
     ofxSCSynth *fx;
-    
+    ofxSCSynth *rhythm;
     int mode;
 };

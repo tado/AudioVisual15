@@ -51,7 +51,7 @@ PerlinPlane::PerlinPlane(int _num, int _nth, int _cutoff, float _gain){
     rotation = ofRandom(180);
     fade = 0.0;
     fadeSpeed = 0.002;
-    color.setHsb(ofMap(nth, 0, 11, 0, 255), 200, 255);
+    color.setHsb(ofMap(nth, 0, 11, 0, 255), 200, 255); 
     
     synth = new ofxSCSynth("moog");
     synth->set("nth", nth);

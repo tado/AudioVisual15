@@ -68,6 +68,7 @@ void ofApp::drawPerlin(){
 
 void ofApp::exit(){
     fx->free();
+    rhythm->free();
     for (int i = 0; i < perlins.size(); i++) {
         perlins[i]->exit();
     }
@@ -75,7 +76,14 @@ void ofApp::exit(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    if (key == 'z') {
+        rhythm = new ofxSCSynth("pulse_rhythm");
+        rhythm->create();
+    }
+    if (key == 'd') {
+        perlins[0]->synth->free();
+        perlins[0]->fadeIn = false;
+    }
 }
 
 //--------------------------------------------------------------
