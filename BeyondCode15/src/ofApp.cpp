@@ -4,9 +4,9 @@
 void ofApp::setup(){
     ofSetFrameRate(60);
     ofBackground(0);
-    ofEnableBlendMode(OF_BLENDMODE_ADD);
     
     mode = 0;
+    playRhythm = false;
     
     post = new ofxPostProcessing();
     post->init(ofGetWidth(), ofGetHeight());
@@ -26,6 +26,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
     switch (mode) {
         case 0:
             drawPerlin();
@@ -34,6 +35,12 @@ void ofApp::draw(){
         default:
             break;
     }
+    
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    ofSetColor(0);
+    ofCircle(mouseX, mouseY, 10);
+    ofSetColor(255);
+    ofCircle(mouseX, mouseY, 5);
 }
 
 void ofApp::drawPerlin(){
@@ -58,9 +65,6 @@ void ofApp::drawPerlin(){
         perlins[i].get()->draw();
     }
     post->end();
-    
-    ofSetColor(255);
-    ofCircle(mouseX, mouseY, 3);
 }
 
 void ofApp::exit(){
@@ -76,13 +80,22 @@ void ofApp::exit(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if (key == 'z') {
+    if (key == 'z' && playRhythm == false) {
         rhythm = shared_ptr<ofxSCSynth>(new ofxSCSynth("pulse_rhythm"));
         rhythm.get()->create();
+        playRhythm = true;
+    }
+    if (key == '/' && playRhythm == true) {
+        rhythm.get()->free();
+        playRhythm = false;
     }
     if (key == 'x') {
         saw = shared_ptr<ofxSCSynth>(new ofxSCSynth("fade_saw"));
         saw.get()->create();
+    }
+    if (key == 'c' || key == 'v') {
+        sin = shared_ptr<ofxSCSynth>(new ofxSCSynth("simple_sine"));
+        sin.get()->create();
     }
     if (key == 'd') {
         perlins[0].get()->synth->free();

@@ -35,5 +35,7 @@ public:
     shared_ptr<ofxSCSynth> rhythm;
     shared_ptr<ofxSCSynth> fxSaw;
     shared_ptr<ofxSCSynth> saw;
+    shared_ptr<ofxSCSynth> sin;
+    bool playRhythm;
     int mode;
 };

@@ -64,6 +64,15 @@ SynthDef("fx_saw", {
 	out = CompanderD.ar(in * amp);
 	Out.ar(0, out);
 }).store;
+
+SynthDef("simple_sine", {
+	arg amp = 0.5;
+	var in, env;
+	in = SinOsc.ar(12000).dup;
+	env = Env.new([1, 1, 0], [0.2, 0.001]);
+	in = CompanderD.ar(in * EnvGen.kr(env, doneAction:2) * amp);
+	Out.ar(0, in);
+}).store
 )
 
 //a = Synth("fx_allpass");
@@ -71,3 +80,4 @@ SynthDef("fx_saw", {
 //c = Synth("pulse_rhythm");
 //d = Synth("fx_saw");
 //e = Synth("fade_saw");
+//f = Synth("simple_sine");
