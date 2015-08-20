@@ -13,8 +13,10 @@ void ofApp::setup(){
     bloom = post->createPass<BloomPass>();
     bloom->setEnabled(true);
     
-    fx = new ofxSCSynth("fx_allpass");
-    fx->create();
+    fx = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_allpass"));
+    fx.get()->create();
+    fxSaw = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_saw"));
+    fxSaw.get()->create();
 }
 
 //--------------------------------------------------------------
@@ -37,52 +39,54 @@ void ofApp::draw(){
 void ofApp::drawPerlin(){
     //update
     for (int i = 0; i < perlins.size(); i++) {
-        perlins[i]->update();
+        perlins[i].get()->update();
         
     }
     if (perlins.size() > PERLIN_NUM) {
-        perlins[0]->synth->free();
-        perlins[0]->fadeIn = false;
+        perlins[0].get()->synth->free();
+        perlins[0].get()->fadeIn = false;
     }
     if (perlins.size() > 1) {
-        while (perlins[0]->lived == false) {
+        while (perlins[0].get()->lived == false) {
             perlins.pop_front();
         }
     }
     
     //draw
     post->begin(cam);
-    //cam.begin();
-    //ofEnableDepthTest();
     for (int i = 0; i < perlins.size(); i++) {
-        perlins[i]->draw();
+        perlins[i].get()->draw();
     }
-    //ofDisableDepthTest();
     post->end();
-    //cam.end();
     
-    ofSetColor(255, 127);
-    ofLine(0, mouseY, ofGetWidth(), mouseY);
-    ofLine(mouseX, 0, mouseX, ofGetHeight());
+    ofSetColor(255);
+    ofCircle(mouseX, mouseY, 3);
 }
 
 void ofApp::exit(){
-    fx->free();
-    rhythm->free();
+    fx.get()->free();
+    fxSaw.get()->free();
+    if (rhythm != NULL) {
+        rhythm->free();
+    }
     for (int i = 0; i < perlins.size(); i++) {
-        perlins[i]->exit();
+        perlins[i].get()->exit();
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     if (key == 'z') {
-        rhythm = new ofxSCSynth("pulse_rhythm");
-        rhythm->create();
+        rhythm = shared_ptr<ofxSCSynth>(new ofxSCSynth("pulse_rhythm"));
+        rhythm.get()->create();
+    }
+    if (key == 'x') {
+        saw = shared_ptr<ofxSCSynth>(new ofxSCSynth("fade_saw"));
+        saw.get()->create();
     }
     if (key == 'd') {
-        perlins[0]->synth->free();
-        perlins[0]->fadeIn = false;
+        perlins[0].get()->synth->free();
+        perlins[0].get()->fadeIn = false;
     }
 }
 
@@ -113,7 +117,7 @@ void ofApp::mouseReleased(int x, int y, int button){
             int nth = int(ofMap(y, 0, ofGetHeight(), 11, 0));
             int cutoff = 500;
             float gain = ofMap(abs(ofGetWidth()/2 - x), 0, ofGetWidth() / 2.0, 1.0, 3.9);
-            PerlinPlane *p = new PerlinPlane(perlins.size(), nth, cutoff, gain);
+            shared_ptr<PerlinPlane> p = shared_ptr<PerlinPlane>(new PerlinPlane(perlins.size(), nth, cutoff, gain));
             perlins.push_back(p);
             break;
     }

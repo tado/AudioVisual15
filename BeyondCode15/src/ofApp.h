@@ -24,15 +24,16 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
+
     ofEasyCam cam;
-    
-    static const int PERLIN_NUM = 5;
-    deque<PerlinPlane *> perlins;
-    
     ofxPostProcessing *post;
     BloomPass::Ptr bloom;
     
-    ofxSCSynth *fx;
-    ofxSCSynth *rhythm;
+    static const int PERLIN_NUM = 5;
+    deque <shared_ptr<PerlinPlane> > perlins;
+    shared_ptr<ofxSCSynth> fx;
+    shared_ptr<ofxSCSynth> rhythm;
+    shared_ptr<ofxSCSynth> fxSaw;
+    shared_ptr<ofxSCSynth> saw;
     int mode;
 };
