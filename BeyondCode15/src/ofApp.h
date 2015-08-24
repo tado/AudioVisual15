@@ -4,6 +4,8 @@
 #include "PerlinPlane.h"
 #include "ofxPostProcessing.h"
 #include "ofxSuperCollider.h"
+#include "SawSynth.h"
+#include "Blink.h"
 
 class ofApp : public ofBaseApp{
     
@@ -14,6 +16,8 @@ public:
     void exit();
     
     void drawPerlin();
+    void drawSaw();
+    void drawBlinks();
     
     void keyPressed(int key);
     void keyReleased(int key);
@@ -36,6 +40,9 @@ public:
     shared_ptr<ofxSCSynth> fxSaw;
     shared_ptr<ofxSCSynth> saw;
     shared_ptr<ofxSCSynth> sin;
+    deque <shared_ptr<SawSynth> > sawsynths;
+    int sawNum;
+    deque <shared_ptr<Blink> > blinks;
     bool playRhythm;
     int mode;
 };

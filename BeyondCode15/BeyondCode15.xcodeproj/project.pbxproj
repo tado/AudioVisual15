@@ -18,6 +18,8 @@
 		14A503607FFA09AE34186B76 /* ofxSCGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15ACE3D73F384D1B71D52792 /* ofxSCGroup.cpp */; };
 		1529EA60921FDF7B07077187 /* b2ParticleAssembly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C10C48B1E9A15223A02411C /* b2ParticleAssembly.cpp */; };
 		1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */; };
+		184BB78E1B8AEE73007B51A8 /* Blink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184BB78C1B8AEE73007B51A8 /* Blink.cpp */; };
+		184BCB7B1B894A11002EBEED /* SawSynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184BCB791B894A11002EBEED /* SawSynth.cpp */; };
 		188EF9EE1B81EAB300AD175F /* PerlinPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188EF9EC1B81EAB300AD175F /* PerlinPlane.cpp */; };
 		18CB16E9947C4281DF428573 /* ofxSCResourceAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C2C9AD397A02F5E8FE538 /* ofxSCResourceAllocator.cpp */; };
 		18D50A5E9090B08B5C379765 /* b2PolygonAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F531CAC5B6483B4596C50946 /* b2PolygonAndCircleContact.cpp */; };
@@ -259,6 +261,10 @@
 		15ACE3D73F384D1B71D52792 /* ofxSCGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSCGroup.cpp; path = ../../../addons/ofxSuperCollider/src/ofxSCGroup.cpp; sourceTree = SOURCE_ROOT; };
 		15C99204FF4D8D72AD034B63 /* ofxUINumberDialer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUINumberDialer.h; path = ../../../addons/ofxUI/src/ofxUINumberDialer.h; sourceTree = SOURCE_ROOT; };
 		17E06821FB98542FDB806E50 /* ofxUIMultiImageButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMultiImageButton.cpp; path = ../../../addons/ofxUI/src/ofxUIMultiImageButton.cpp; sourceTree = SOURCE_ROOT; };
+		184BB78C1B8AEE73007B51A8 /* Blink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Blink.cpp; sourceTree = "<group>"; };
+		184BB78D1B8AEE73007B51A8 /* Blink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blink.h; sourceTree = "<group>"; };
+		184BCB791B894A11002EBEED /* SawSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SawSynth.cpp; sourceTree = "<group>"; };
+		184BCB7A1B894A11002EBEED /* SawSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SawSynth.h; sourceTree = "<group>"; };
 		18821ED6AA2B03D0D6A1028F /* SC_World.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_World.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_World.h; sourceTree = SOURCE_ROOT; };
 		188EF9EC1B81EAB300AD175F /* PerlinPlane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PerlinPlane.cpp; sourceTree = "<group>"; };
 		188EF9ED1B81EAB300AD175F /* PerlinPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerlinPlane.h; sourceTree = "<group>"; };
@@ -1445,6 +1451,10 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				188EF9EC1B81EAB300AD175F /* PerlinPlane.cpp */,
 				188EF9ED1B81EAB300AD175F /* PerlinPlane.h */,
+				184BCB791B894A11002EBEED /* SawSynth.cpp */,
+				184BCB7A1B894A11002EBEED /* SawSynth.h */,
+				184BB78C1B8AEE73007B51A8 /* Blink.cpp */,
+				184BB78D1B8AEE73007B51A8 /* Blink.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1652,6 +1662,7 @@
 				BF30D7A362CEBF9286D087FD /* b2WorldCallbacks.cpp in Sources */,
 				B427DFF6B9AB0E77D6DA6FEF /* b2ChainAndCircleContact.cpp in Sources */,
 				3427B76B23CCCED5264323F9 /* b2ChainAndPolygonContact.cpp in Sources */,
+				184BCB7B1B894A11002EBEED /* SawSynth.cpp in Sources */,
 				B5F050DAFDC878A0E173FDD8 /* b2CircleContact.cpp in Sources */,
 				A18332F9CD3C4E774B368D9A /* b2Contact.cpp in Sources */,
 				8D5D332C944074A51DB04779 /* b2ContactSolver.cpp in Sources */,
@@ -1721,6 +1732,7 @@
 				F392A99D83698FC099127880 /* ofxUIDropDownList.cpp in Sources */,
 				084025DA517D8329301FE1B6 /* ofxUIEventArgs.cpp in Sources */,
 				7252706DA14C1BE63950ADDA /* ofxUIFPS.cpp in Sources */,
+				184BB78E1B8AEE73007B51A8 /* Blink.cpp in Sources */,
 				22030CBDCC25D815E7ED6757 /* ofxUIFPSSlider.cpp in Sources */,
 				3D4EA8E172D3E4A30FEFA969 /* ofxUIImage.cpp in Sources */,
 				7F2CD93F681F3C1547B3BF2C /* ofxUIImageButton.cpp in Sources */,

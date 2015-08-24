@@ -27,15 +27,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofEnableBlendMode(OF_BLENDMODE_ADD);
-    switch (mode) {
-        case 0:
-            drawPerlin();
-            break;
-            
-        default:
-            break;
-    }
-    
+    drawPerlin();
+    drawSaw();
+    drawBlinks();
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
     ofSetColor(0);
     ofCircle(mouseX, mouseY, 10);
@@ -67,6 +61,19 @@ void ofApp::drawPerlin(){
     post->end();
 }
 
+void ofApp::drawSaw(){
+    for (int i = 0; i < sawsynths.size(); i++) {
+        sawsynths[i]->update();
+        sawsynths[i]->draw();
+    }
+}
+
+void ofApp::drawBlinks(){
+    for (int i = 0; i < blinks.size(); i++) {
+        blinks[i]->draw();
+    }
+}
+
 void ofApp::exit(){
     fx.get()->free();
     fxSaw.get()->free();
@@ -74,7 +81,11 @@ void ofApp::exit(){
         rhythm->free();
     }
     for (int i = 0; i < perlins.size(); i++) {
-        perlins[i].get()->exit();
+        perlins[i].get()->synth->free();
+        //perlins[i].get()->exit();
+    }
+    for (int i = 0; i < blinks.size(); i++) {
+        blinks[i].get()->synth->free();
     }
 }
 
@@ -100,6 +111,37 @@ void ofApp::keyPressed(int key){
     if (key == 'd') {
         perlins[0].get()->synth->free();
         perlins[0].get()->fadeIn = false;
+    }
+    if (key == 'a') {
+        shared_ptr<SawSynth> s = shared_ptr<SawSynth>(new SawSynth(sawNum));
+        sawNum++;
+        sawsynths.push_back(s);
+    }
+    if (key == 's' && sawsynths.size() > 0) {
+        sawsynths[0]->synth->free();
+        sawsynths.pop_front();
+    }
+    if (key == 'q') {
+        shared_ptr<Blink> b = shared_ptr<Blink>(new Blink(0.04 * PI * 4.0));
+        blinks.push_back(b);
+    }
+    if (key == 'w' && blinks.size() > 0){
+        blinks[0]->synth->free();
+        blinks.pop_front();
+    }
+    if (key == '=') {
+        if (rhythm != NULL) {
+            rhythm->free();
+        }
+        for (int i = 0; i < perlins.size(); i++) {
+            perlins[i].get()->synth->free();
+        }
+        perlins.clear();
+        for (int i = 0; i < sawsynths.size(); i++) {
+            sawsynths[i].get()->synth->free();
+        }
+        sawNum = 0;
+        sawsynths.clear();
     }
 }
 
