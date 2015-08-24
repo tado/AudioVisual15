@@ -122,7 +122,7 @@ void ofApp::keyPressed(int key){
         sawsynths.pop_front();
     }
     if (key == 'q') {
-        shared_ptr<Blink> b = shared_ptr<Blink>(new Blink(0.04 * PI * 4.0));
+        shared_ptr<Blink> b = shared_ptr<Blink>(new Blink(ofRandom(0.2, 0.4)));
         blinks.push_back(b);
     }
     if (key == 'w' && blinks.size() > 0){

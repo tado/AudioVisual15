@@ -66,17 +66,19 @@ SynthDef("col_closesaw", {
 
 SynthDef("blink", {
 	//arg freq;
-	var freq, lfo, amp, out, sawFreq;
-	amp = 0.5;
+	arg amp = 0.0;
+	var freq, lfo, out, sawFreq, lpf;
 	freq = ExpRand(8, 10);
-	lfo = SinOsc.ar(0.04);
+	//lfo = SinOsc.ar(0.04);
 	sawFreq = 20;
+	lpf = ExpRand(400, 500);
 	//out = Saw.ar([sawFreq, sawFreq * 1.01]).dup * Pulse.ar(freq, 0.1) * lfo;
-	out = LFSaw.ar([sawFreq, sawFreq + 0.2]) + LFSaw.ar([sawFreq * 1.5, sawFreq * 2.0 - 0.2])* lfo;
-	out = RLPF.ar(out, LFNoise2.ar(0.1, 300, 600), 1.0);
+	//out = LFSaw.ar([sawFreq, sawFreq + 0.2]) + LFSaw.ar([sawFreq * 2.0, sawFreq * 2.0 - 0.2]);
+	out = Pulse.ar([sawFreq, sawFreq + 0.2], 0.05) + Pulse.ar([sawFreq * 2.0, sawFreq * 2.0 - 0.2]. 0.05);
+	out = RLPF.ar(out, LFNoise2.ar(0.5, lpf, lpf * 2), 1.2);
 	//2.do({ out = AllpassL.ar(out, 0.2, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.02,0.04), 0.5) });
-	out = CompanderD.ar(out) * amp;
-	Out.ar(0, out);
+	//out = CompanderD.ar(out) * amp;
+	Out.ar(0, out * amp);
 	//Out.ar(5, out);
 }).store;
 

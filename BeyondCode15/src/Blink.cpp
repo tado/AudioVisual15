@@ -18,7 +18,8 @@ Blink::Blink(float _freq){
 }
 
 void Blink::draw(){
-    float br = sin((ofGetElapsedTimef() - startTime) * freq) * 127 + 127;
+    float br = abs(sin((ofGetElapsedTimef() - startTime) * freq) * 255);
+    synth.get()->set("amp", br / 255.0 * 0.5);
     ofSetColor(color.r, color.g, color.b, br);
     ofSetRectMode(OF_RECTMODE_CORNER);
     if ((ofGetFrameNum() - startFrame) % 4 == 0) {
