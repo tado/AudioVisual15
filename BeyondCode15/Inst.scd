@@ -14,17 +14,22 @@ SynthDef("moog", {
 }).store;
 
 SynthDef("pulse_rhythm", {
-	arg amp=0.75, freq = 18000;
-	var in1, in2, env, out;
-	env = Env.new([0, 1], [30.0]);
+	arg amp=0.25, freq = 18000;
+	var in1, in2, env, out1, out2, out, baseSin, sawFreq, trigOut, pan, sinOut;
+	env = Env.new([0, 1], [10.0]);
 	in1 = AllpassC.ar(SinOsc.ar([40.1, 40]).tanh,0.4,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
 	in2 = AllpassC.ar(SinOsc.ar([60, 60.1]).tanh,0.4,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
-	//in1 = RLPF.ar(in1, LFNoise1.kr([10.0, 10.5], 10000, 20000), 0.7);
-	//in2 = RLPF.ar(in2, LFNoise1.kr([3.0, 2.5], 8000, 16000), 0.7);
-	//out = Limiter.ar(MidEQ.ar(in1 + in2, freq, 0.7, 8)) * EnvGen.kr(env, doneAction:0) * amp;
-	//out = CompanderD.ar(MidEQ.ar(in1 + in2, freq, 0.7, 8)) * EnvGen.kr(env, doneAction:0) * amp;
-	//out = CompanderD.ar(in1 + in2) * EnvGen.kr(env, doneAction:0) * amp;
-	out = Limiter.ar(in1 + in2) * EnvGen.kr(env, doneAction:0) * amp;
+	out1 = in1 + in2;
+
+	sawFreq = 111;
+	trigOut = Trig.ar(Saw.ar(sawFreq),LFNoise1.ar(0.1, 0.5, 1.2))
+	+ Trig.ar(Saw.ar(sawFreq * 2.3),LFNoise1.ar(0.32, 0.5, 4.2))
+	+ Trig.ar(Saw.ar(sawFreq * 8.8),LFNoise1.ar(0.32, 0.5, 4.2));
+	sinOut = SinOsc.ar(trigOut * sawFreq);
+	pan = SinOsc.ar(trigOut);
+	out2 = GrainIn.ar(2, sinOut, sinOut / LFNoise1.ar([5.0, 4.0], 1.0, 1.1),pan, LFNoise1.ar(0.2), -1) + GrainIn.ar(2, sinOut, sinOut / LFNoise1.ar([3.0, 2.0], 0.5, 1.1), pan, LFNoise1.ar(0.3), -1);
+	//out2 = out2;
+	out = (Limiter.ar(out1 + out2) * EnvGen.kr(env, doneAction:0)).softclip * amp;
 	Out.ar(0, out);
 }).store;
 
@@ -67,30 +72,38 @@ SynthDef("col_closesaw", {
 SynthDef("blink", {
 	//arg freq;
 	arg amp = 0.0;
-	var freq, lfo, out, sawFreq, lpf;
+	var freq, lfo, sinOut, out, sawFreq, lpf;
 	freq = ExpRand(8, 10);
 	//lfo = SinOsc.ar(0.04);
 	sawFreq = 20;
-	lpf = ExpRand(400, 500);
+	lpf = ExpRand(100, 200);
+	sinOut = SinOsc.ar(12000) *  Pulse.ar([sawFreq * 0.5, sawFreq * 0.5], 0.5);
 	//out = Saw.ar([sawFreq, sawFreq * 1.01]).dup * Pulse.ar(freq, 0.1) * lfo;
 	//out = LFSaw.ar([sawFreq, sawFreq + 0.2]) + LFSaw.ar([sawFreq * 2.0, sawFreq * 2.0 - 0.2]);
-	out = Pulse.ar([sawFreq, sawFreq + 0.2], 0.05) + Pulse.ar([sawFreq * 2.0, sawFreq * 2.0 - 0.2]. 0.05);
-	out = RLPF.ar(out, LFNoise2.ar(0.5, lpf, lpf * 2), 1.2);
+	out = Pulse.ar([sawFreq, sawFreq], 0.05) + Pulse.ar([sawFreq * 2.0, sawFreq * 2.0], 0.05);
+	out = RLPF.ar(out, LFNoise2.ar(0.5, lpf, lpf * 2), 0.5) + sinOut;
 	//2.do({ out = AllpassL.ar(out, 0.2, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.02,0.04), 0.5) });
 	//out = CompanderD.ar(out) * amp;
-	Out.ar(0, out * amp);
+	Out.ar(7, out * amp);
 	//Out.ar(5, out);
+}).store;
+
+SynthDef("fx_blink", {
+	var in, out;
+	in = In.ar(7, 2);
+	out = (Limiter.ar(in)).softclip * 0.5;
+	Out.ar(0, out);
 }).store;
 
 SynthDef("fx_allpass", {
 	arg lpf=440, rq=0.5, amp=0.6, freq = 12000;
 	var in, out;
 	in = In.ar(3, 2);
-	32.do({ in = AllpassL.ar(in, 0.1, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.01,0.06), 2.0) });
-	//out = Limiter.ar(MidEQ.ar(in, 14000, 0.5, 8));
-	//out = CompanderD.ar(in) * amp;
+	32.do({ in = AllpassL.ar(in, 0.1, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.01,0.06), 4.0) });
+	//out = Limiter.ar(MidEQ.ar(in, freq, 0.5, 8));
+	out = CompanderD.ar(in) * amp;
 	//out = Limiter.ar(in) * amp;
-	out = CompanderD.ar(MidEQ.ar(in, freq, 0.7, 8)) * amp;
+	//out = CompanderD.ar(MidEQ.ar(in, freq, 0.7, 8)) * amp;
 	Out.ar(0, out);
 }).store;
 
@@ -99,11 +112,11 @@ SynthDef("fx_saw", {
 	arg amp = 0.5;
 	var in, out;
 	in = In.ar(5, 2);
-	4.do({ in = AllpassL.ar(in, 0.2, LFNoise2.kr([rrand(0.0, 0.01),rrand(0.0, 0.01)],0.02,0.04), 1.0) });
+	//32.do({ in = AllpassL.ar(in, 0.2, LFNoise2.kr([rrand(0.0, 0.01),rrand(0.0, 0.01)],0.02,0.04), 5.0) });
 	//out = Limiter.ar(MidEQ.ar(in, 14000, 0.5, 8));
 	//out = CompanderD.ar(in) * amp;
 	//out = Limiter.ar(in) * amp;
-	out = CompanderD.ar(in * amp);
+	out = CompanderD.ar(in * amp).softclip * 0.5;
 	Out.ar(0, out);
 }).store;
 )
@@ -115,3 +128,23 @@ SynthDef("fx_saw", {
 //e = Synth("fade_saw");
 //f = Synth("simple_sine");
 //g = Synth("blink");
+
+/*
+
+play{
+	var amp;
+	amp = 0.07;
+	b=SinOsc;
+	x = 222;
+	p=Trig.ar(Saw.ar(x),LFNoise1.ar(0.1, 0.5, 1.2)) + Trig.ar(Saw.ar(x * 4.0),LFNoise1.ar(0.32, 0.5, 2.2));
+	y=b.ar(p*x);
+	z=b.ar(p);
+o = GrainIn.ar(2, y, y / LFNoise1.ar([5.0, 4.0], 1.0, 1.1),z, LFNoise1.ar(0.2), -1)
++ GrainIn.ar(2, y, y / LFNoise1.ar([3.0, 2.0], 0.5, 1.1),z, LFNoise1.ar(0.3), -1);
+	//8.do({ o = AllpassL.ar(o, 0.1, LFNoise2.kr([rrand(0.0, 0.01),rrand(0.0, 0.01)],0.01,0.06), 1.0) });
+	//o = GVerb.ar(o * 0.25, 5);
+	CompanderD.ar(o) * amp;
+    //o * amp;
+}
+
+*/

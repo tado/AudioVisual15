@@ -17,6 +17,8 @@ void ofApp::setup(){
     fx.get()->create();
     fxSaw = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_saw"));
     fxSaw.get()->create();
+    fxBlink = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_blink"));
+    fxBlink.get()->create();
 }
 
 //--------------------------------------------------------------

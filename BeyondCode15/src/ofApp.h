@@ -38,6 +38,7 @@ public:
     shared_ptr<ofxSCSynth> fx;
     shared_ptr<ofxSCSynth> rhythm;
     shared_ptr<ofxSCSynth> fxSaw;
+    shared_ptr<ofxSCSynth> fxBlink;
     shared_ptr<ofxSCSynth> saw;
     shared_ptr<ofxSCSynth> sin;
     deque <shared_ptr<SawSynth> > sawsynths;
