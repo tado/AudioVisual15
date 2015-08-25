@@ -1,6 +1,6 @@
 (
 SynthDef("moog", {
-	arg nth = 0, freq = 40, cutoff = 100, amp = 0.5, gain = 3.0;
+	arg nth = 0, freq = 40, cutoff = 100, amp = 0.75, gain = 3.0;
 	var in, env;
 	env = Env.new([0, 1], [10.0]);
 	in = MoogFF.ar(
@@ -98,7 +98,7 @@ SynthDef("fx_allpass", {
 	arg lpf=440, rq=0.5, amp=0.6, freq = 12000;
 	var in, out;
 	in = In.ar(3, 2);
-	32.do({ in = AllpassL.ar(in, 0.1, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.01,0.06), 4.0) });
+	32.do({ in = AllpassL.ar(in, 0.1, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.01,0.06), 2.0) });
 	//out = Limiter.ar(MidEQ.ar(in, freq, 0.5, 8));
 	out = CompanderD.ar(in) * amp;
 	//out = Limiter.ar(in) * amp;
