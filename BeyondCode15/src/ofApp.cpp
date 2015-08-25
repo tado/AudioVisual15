@@ -13,6 +13,8 @@ void ofApp::setup(){
     bloom = post->createPass<BloomPass>();
     bloom->setEnabled(true);
     
+    ofxSuperColliderServer::init(57110, 96000);
+    
     fx = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_allpass"));
     fx.get()->create();
     fxSaw = shared_ptr<ofxSCSynth>(new ofxSCSynth("fx_saw"));
@@ -46,8 +48,10 @@ void ofApp::drawPerlin(){
         
     }
     if (perlins.size() > PERLIN_NUM) {
-        perlins[0].get()->synth->free();
-        perlins[0].get()->fadeIn = false;
+        if (perlins[0].get()->fadeIn) {
+            perlins[0].get()->synth->free();
+            perlins[0].get()->fadeIn = false;
+        }
     }
     if (perlins.size() > 1) {
         while (perlins[0].get()->lived == false) {

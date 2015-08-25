@@ -21,6 +21,9 @@
 		184BB78E1B8AEE73007B51A8 /* Blink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184BB78C1B8AEE73007B51A8 /* Blink.cpp */; };
 		184BCB7B1B894A11002EBEED /* SawSynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184BCB791B894A11002EBEED /* SawSynth.cpp */; };
 		188EF9EE1B81EAB300AD175F /* PerlinPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188EF9EC1B81EAB300AD175F /* PerlinPlane.cpp */; };
+		189CAC151B8C503100B8F92C /* ofxSuperColliderServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 189CAC0F1B8C503100B8F92C /* ofxSuperColliderServer.cpp */; };
+		189CAC1C1B8C511600B8F92C /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 189CAC0C1B8C503100B8F92C /* libscsynth.a */; };
+		189CAC1D1B8C511600B8F92C /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 189CAC0D1B8C503100B8F92C /* libsndfile.a */; };
 		18CB16E9947C4281DF428573 /* ofxSCResourceAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C2C9AD397A02F5E8FE538 /* ofxSCResourceAllocator.cpp */; };
 		18D50A5E9090B08B5C379765 /* b2PolygonAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F531CAC5B6483B4596C50946 /* b2PolygonAndCircleContact.cpp */; };
 		1DAAC3FB4B98B08AE63F4687 /* ofxUISuperCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */; };
@@ -146,7 +149,6 @@
 		D60E54E7FD6E19BC8636E0D2 /* ofxUIRadio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D33A3E929B0B5D9C002E30E /* ofxUIRadio.cpp */; };
 		D7014DA1DC8ABBB6FB6C76EE /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C0483B6F7B4740C77611766 /* b2Math.cpp */; };
 		D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF8D27B3DEDC121DE85F5B7B /* ZoomBlurPass.cpp */; };
-		DD088E932400B4089093A4D4 /* ofxSuperColliderServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6C676C40BF20BF2F7198913 /* ofxSuperColliderServer.cpp */; };
 		DF0C851B244C4C867CEA8806 /* ofxUICircleSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2556100026B425E8370BCF75 /* ofxUICircleSlider.cpp */; };
 		DF69DB222467E01AF295EA2F /* b2EdgeAndPolygonContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D352474E2100193463C35 /* b2EdgeAndPolygonContact.cpp */; };
 		DFB75F1EBE744A456AC999F4 /* ContrastPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6788311DC7D945282047837A /* ContrastPass.cpp */; };
@@ -233,22 +235,13 @@
 		044D4B2A1A607F88FEF2B610 /* ConvolutionPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConvolutionPass.h; path = ../../../addons/ofxPostProcessing/src/ConvolutionPass.h; sourceTree = SOURCE_ROOT; };
 		0453A7C309E8AE8F8C1CC6E8 /* DofPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DofPass.h; path = ../../../addons/ofxPostProcessing/src/DofPass.h; sourceTree = SOURCE_ROOT; };
 		0460492C2F65301A5FD76486 /* b2ChainAndPolygonContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2ChainAndPolygonContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp; sourceTree = SOURCE_ROOT; };
-		0515A89BD0974F0ED1B4A5ED /* SC_Wire.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Wire.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Wire.h; sourceTree = SOURCE_ROOT; };
-		05BB5E29679C8DA7ABB2F039 /* Unroll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Unroll.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/Unroll.h; sourceTree = SOURCE_ROOT; };
-		064255B674154059953FBB26 /* SC_DemandUnit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_DemandUnit.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_DemandUnit.h; sourceTree = SOURCE_ROOT; };
-		0644BF2D8ABCACAA56C1F6A2 /* SC_CoreAudio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_CoreAudio.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_CoreAudio.h; sourceTree = SOURCE_ROOT; };
-		065DC04CDCF1F0F77E8EF9DF /* SC_Node.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Node.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Node.h; sourceTree = SOURCE_ROOT; };
 		06C7032F68D99A145A53CB6F /* ofxUITextInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITextInput.cpp; path = ../../../addons/ofxUI/src/ofxUITextInput.cpp; sourceTree = SOURCE_ROOT; };
-		087B714D2D9BE742EB897592 /* SC_FifoMsg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_FifoMsg.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_FifoMsg.h; sourceTree = SOURCE_ROOT; };
 		088524F4004485D09274D0C9 /* ofxGLSLSimplexNoise.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGLSLSimplexNoise.cpp; path = ../../../addons/ofxGLSLSimplexNoise/src/ofxGLSLSimplexNoise.cpp; sourceTree = SOURCE_ROOT; };
-		089C4B3EB93BD211DA64BE85 /* SC_WorldOptions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_WorldOptions.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_WorldOptions.h; sourceTree = SOURCE_ROOT; };
 		08A9C84B3CA68561BE01FF37 /* ofxUIWidget.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWidget.cpp; path = ../../../addons/ofxUI/src/ofxUIWidget.cpp; sourceTree = SOURCE_ROOT; };
 		0AC8B4DE8CD341280FDE798A /* EdgePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EdgePass.cpp; path = ../../../addons/ofxPostProcessing/src/EdgePass.cpp; sourceTree = SOURCE_ROOT; };
-		0ADFA341B55572CA278BF2B2 /* dfftlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = dfftlib.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/dfftlib.h; sourceTree = SOURCE_ROOT; };
 		0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
 		0BC82FF9BACF54030E42E808 /* RGBShiftPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RGBShiftPass.h; path = ../../../addons/ofxPostProcessing/src/RGBShiftPass.h; sourceTree = SOURCE_ROOT; };
 		0BE97B413EDF87CBEBF60578 /* b2Settings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Settings.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Settings.h; sourceTree = SOURCE_ROOT; };
-		0C793CEE3B4E556C3F17653B /* SC_InterfaceTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_InterfaceTable.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_InterfaceTable.h; sourceTree = SOURCE_ROOT; };
 		0D6768C572B6CA49227C29EA /* ofxUINumberDialer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUINumberDialer.cpp; path = ../../../addons/ofxUI/src/ofxUINumberDialer.cpp; sourceTree = SOURCE_ROOT; };
 		0D811F3E1817C17351F97CCF /* BleachBypassPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BleachBypassPass.h; path = ../../../addons/ofxPostProcessing/src/BleachBypassPass.h; sourceTree = SOURCE_ROOT; };
 		0DE8B77977749C1835A9472B /* ofxUISlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISlider.cpp; path = ../../../addons/ofxUI/src/ofxUISlider.cpp; sourceTree = SOURCE_ROOT; };
@@ -265,10 +258,80 @@
 		184BB78D1B8AEE73007B51A8 /* Blink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blink.h; sourceTree = "<group>"; };
 		184BCB791B894A11002EBEED /* SawSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SawSynth.cpp; sourceTree = "<group>"; };
 		184BCB7A1B894A11002EBEED /* SawSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SawSynth.h; sourceTree = "<group>"; };
-		18821ED6AA2B03D0D6A1028F /* SC_World.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_World.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_World.h; sourceTree = SOURCE_ROOT; };
 		188EF9EC1B81EAB300AD175F /* PerlinPlane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PerlinPlane.cpp; sourceTree = "<group>"; };
 		188EF9ED1B81EAB300AD175F /* PerlinPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerlinPlane.h; sourceTree = "<group>"; };
-		18E1040640AF7EF5B4002D07 /* SC_HiddenWorld.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_HiddenWorld.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_HiddenWorld.h; sourceTree = SOURCE_ROOT; };
+		189CABC51B8C503100B8F92C /* dfftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dfftlib.h; sourceTree = "<group>"; };
+		189CABC61B8C503100B8F92C /* fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftlib.h; sourceTree = "<group>"; };
+		189CABC71B8C503100B8F92C /* SC_AllocPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AllocPool.h; sourceTree = "<group>"; };
+		189CABC81B8C503100B8F92C /* SC_Altivec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Altivec.h; sourceTree = "<group>"; };
+		189CABC91B8C503100B8F92C /* SC_DirUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DirUtils.h; sourceTree = "<group>"; };
+		189CABCA1B8C503100B8F92C /* SC_Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Endian.h; sourceTree = "<group>"; };
+		189CABCB1B8C503100B8F92C /* SC_fftlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_fftlib.h; sourceTree = "<group>"; };
+		189CABCC1B8C503100B8F92C /* SC_FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FIFO.h; sourceTree = "<group>"; };
+		189CABCD1B8C503100B8F92C /* sc_popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_popen.h; sourceTree = "<group>"; };
+		189CABCE1B8C503100B8F92C /* SC_Reply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Reply.h; sourceTree = "<group>"; };
+		189CABCF1B8C503100B8F92C /* SC_Sem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Sem.h; sourceTree = "<group>"; };
+		189CABD01B8C503100B8F92C /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StandAloneInfo_Darwin.h; sourceTree = "<group>"; };
+		189CABD11B8C503100B8F92C /* SC_StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringBuffer.h; sourceTree = "<group>"; };
+		189CABD21B8C503100B8F92C /* SC_StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_StringParser.h; sourceTree = "<group>"; };
+		189CABD31B8C503100B8F92C /* SC_VFP11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_VFP11.h; sourceTree = "<group>"; };
+		189CABD41B8C503100B8F92C /* SC_Win32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Win32Utils.h; sourceTree = "<group>"; };
+		189CABD51B8C503100B8F92C /* scsynthsend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scsynthsend.h; sourceTree = "<group>"; };
+		189CABD71B8C503100B8F92C /* clz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clz.h; sourceTree = "<group>"; };
+		189CABD81B8C503100B8F92C /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		189CABD91B8C503100B8F92C /* SC_BoundsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BoundsMacros.h; sourceTree = "<group>"; };
+		189CABDA1B8C503100B8F92C /* SC_BufGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_BufGen.h; sourceTree = "<group>"; };
+		189CABDB1B8C503100B8F92C /* SC_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Constants.h; sourceTree = "<group>"; };
+		189CABDC1B8C503100B8F92C /* SC_DemandUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_DemandUnit.h; sourceTree = "<group>"; };
+		189CABDD1B8C503100B8F92C /* SC_FifoMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_FifoMsg.h; sourceTree = "<group>"; };
+		189CABDE1B8C503100B8F92C /* SC_Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Graph.h; sourceTree = "<group>"; };
+		189CABDF1B8C503100B8F92C /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineBinaryOp.h; sourceTree = "<group>"; };
+		189CABE01B8C503100B8F92C /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InlineUnaryOp.h; sourceTree = "<group>"; };
+		189CABE11B8C503100B8F92C /* SC_InterfaceTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_InterfaceTable.h; sourceTree = "<group>"; };
+		189CABE21B8C503100B8F92C /* sc_msg_iter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sc_msg_iter.h; sourceTree = "<group>"; };
+		189CABE31B8C503100B8F92C /* SC_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Node.h; sourceTree = "<group>"; };
+		189CABE41B8C503100B8F92C /* SC_PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_PlugIn.h; sourceTree = "<group>"; };
+		189CABE51B8C503100B8F92C /* SC_Rate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Rate.h; sourceTree = "<group>"; };
+		189CABE61B8C503100B8F92C /* SC_RGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_RGen.h; sourceTree = "<group>"; };
+		189CABE71B8C503100B8F92C /* SC_SndBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SndBuf.h; sourceTree = "<group>"; };
+		189CABE81B8C503100B8F92C /* SC_sndfile_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_sndfile_stub.h; sourceTree = "<group>"; };
+		189CABE91B8C503100B8F92C /* SC_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Types.h; sourceTree = "<group>"; };
+		189CABEA1B8C503100B8F92C /* SC_Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Unit.h; sourceTree = "<group>"; };
+		189CABEB1B8C503100B8F92C /* SC_Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Wire.h; sourceTree = "<group>"; };
+		189CABEC1B8C503100B8F92C /* SC_World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_World.h; sourceTree = "<group>"; };
+		189CABED1B8C503100B8F92C /* SC_WorldOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WorldOptions.h; sourceTree = "<group>"; };
+		189CABEE1B8C503100B8F92C /* Unroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unroll.h; sourceTree = "<group>"; };
+		189CABF01B8C503100B8F92C /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		189CABF11B8C503100B8F92C /* MsgFifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgFifo.h; sourceTree = "<group>"; };
+		189CABF21B8C503100B8F92C /* OSC_Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSC_Packet.h; sourceTree = "<group>"; };
+		189CABF31B8C503100B8F92C /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		189CABF41B8C503100B8F92C /* ReadWriteMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteMacros.h; sourceTree = "<group>"; };
+		189CABF51B8C503100B8F92C /* Rendezvous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
+		189CABF61B8C503100B8F92C /* SC_AU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_AU.h; sourceTree = "<group>"; };
+		189CABF71B8C503100B8F92C /* SC_Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Complex.h; sourceTree = "<group>"; };
+		189CABF81B8C503100B8F92C /* SC_ComPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_ComPort.h; sourceTree = "<group>"; };
+		189CABF91B8C503100B8F92C /* SC_CoreAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_CoreAudio.h; sourceTree = "<group>"; };
+		189CABFA1B8C503100B8F92C /* SC_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Errors.h; sourceTree = "<group>"; };
+		189CABFB1B8C503100B8F92C /* SC_GraphDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_GraphDef.h; sourceTree = "<group>"; };
+		189CABFC1B8C503100B8F92C /* SC_Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Group.h; sourceTree = "<group>"; };
+		189CABFD1B8C503100B8F92C /* SC_HiddenWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_HiddenWorld.h; sourceTree = "<group>"; };
+		189CABFE1B8C503100B8F92C /* SC_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib.h; sourceTree = "<group>"; };
+		189CABFF1B8C503100B8F92C /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lib_Cintf.h; sourceTree = "<group>"; };
+		189CAC001B8C503100B8F92C /* SC_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_List.h; sourceTree = "<group>"; };
+		189CAC011B8C503100B8F92C /* SC_Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Lock.h; sourceTree = "<group>"; };
+		189CAC021B8C503100B8F92C /* SC_Prototypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Prototypes.h; sourceTree = "<group>"; };
+		189CAC031B8C503100B8F92C /* SC_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Samp.h; sourceTree = "<group>"; };
+		189CAC041B8C503100B8F92C /* SC_SequencedCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SequencedCommand.h; sourceTree = "<group>"; };
+		189CAC051B8C503100B8F92C /* SC_Str4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_Str4.h; sourceTree = "<group>"; };
+		189CAC061B8C503100B8F92C /* SC_SyncCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SyncCondition.h; sourceTree = "<group>"; };
+		189CAC071B8C503100B8F92C /* SC_SynthDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_SynthDef.h; sourceTree = "<group>"; };
+		189CAC081B8C503100B8F92C /* SC_UnitDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitDef.h; sourceTree = "<group>"; };
+		189CAC091B8C503100B8F92C /* SC_UnitSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_UnitSpec.h; sourceTree = "<group>"; };
+		189CAC0A1B8C503100B8F92C /* SC_WireSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SC_WireSpec.h; sourceTree = "<group>"; };
+		189CAC0C1B8C503100B8F92C /* libscsynth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libscsynth.a; sourceTree = "<group>"; };
+		189CAC0D1B8C503100B8F92C /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsndfile.a; sourceTree = "<group>"; };
+		189CAC0F1B8C503100B8F92C /* ofxSuperColliderServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSuperColliderServer.cpp; sourceTree = "<group>"; };
+		189CAC101B8C503100B8F92C /* ofxSuperColliderServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSuperColliderServer.h; sourceTree = "<group>"; };
 		1902452F5E510A2DBC1E5BD6 /* ofxUIMultiImageToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMultiImageToggle.h; path = ../../../addons/ofxUI/src/ofxUIMultiImageToggle.h; sourceTree = SOURCE_ROOT; };
 		19572082584CC5A6F350437C /* b2DynamicTree.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2DynamicTree.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2DynamicTree.cpp; sourceTree = SOURCE_ROOT; };
 		199901E3C0391D3CA940B595 /* b2PolygonContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2PolygonContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2PolygonContact.cpp; sourceTree = SOURCE_ROOT; };
@@ -280,66 +343,48 @@
 		1C5ED4467DFF0AC3482E9362 /* ofxUIMultiImageToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMultiImageToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIMultiImageToggle.cpp; sourceTree = SOURCE_ROOT; };
 		1C7AADB7DBC7C365EDAF97AE /* b2Collision.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Collision.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2Collision.h; sourceTree = SOURCE_ROOT; };
 		1C8346E1B47F16C3D9F591A5 /* ofxSCBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSCBuffer.cpp; path = ../../../addons/ofxSuperCollider/src/ofxSCBuffer.cpp; sourceTree = SOURCE_ROOT; };
-		1DB0C638B96B3D3D65D936D7 /* SC_AU.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_AU.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_AU.h; sourceTree = SOURCE_ROOT; };
 		1E29C7E8C47E3E2DB1C58766 /* ofxUIRectangle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRectangle.h; path = ../../../addons/ofxUI/src/ofxUIRectangle.h; sourceTree = SOURCE_ROOT; };
 		1F14A23F47351F5EFB5D07B3 /* b2IntrusiveList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2IntrusiveList.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2IntrusiveList.h; sourceTree = SOURCE_ROOT; };
 		20F35AFADAF0068B067E713F /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
-		21EE2AD5D81F47C840EDE4C4 /* SC_SyncCondition.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_SyncCondition.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_SyncCondition.h; sourceTree = SOURCE_ROOT; };
 		23640F57DF6C4BB6BFC5DA4C /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
 		23FA31CAEA236B2C1E218497 /* ofxUIWidgets.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWidgets.h; path = ../../../addons/ofxUI/src/ofxUIWidgets.h; sourceTree = SOURCE_ROOT; };
-		23FD85C382282B466D1C1833 /* SC_Samp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Samp.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Samp.h; sourceTree = SOURCE_ROOT; };
 		2556100026B425E8370BCF75 /* ofxUICircleSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUICircleSlider.cpp; path = ../../../addons/ofxUI/src/ofxUICircleSlider.cpp; sourceTree = SOURCE_ROOT; };
-		26821B41051DABD2C63EACDE /* SC_Lock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Lock.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Lock.h; sourceTree = SOURCE_ROOT; };
 		2689C5C8A97002C218125F2F /* ofxUIImageSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIImageSlider.cpp; sourceTree = SOURCE_ROOT; };
 		271AF74D7380F148BDDFF40E /* del_interface.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = del_interface.hpp; path = ../../../addons/ofxLiquidFun/libs/triangle/del_interface.hpp; sourceTree = SOURCE_ROOT; };
 		27379686F7E144D6AE4D9A39 /* b2CircleShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2CircleShape.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2CircleShape.h; sourceTree = SOURCE_ROOT; };
-		2803539D8D96A7027D6F47D9 /* SC_RGen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_RGen.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_RGen.h; sourceTree = SOURCE_ROOT; };
 		28155024C27152A66926B553 /* ofxUIBaseDraws.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIBaseDraws.cpp; path = ../../../addons/ofxUI/src/ofxUIBaseDraws.cpp; sourceTree = SOURCE_ROOT; };
 		28F4383510244B2710239DDF /* b2ChainShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2ChainShape.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2ChainShape.h; sourceTree = SOURCE_ROOT; };
-		2A23F606E73DA31B92D98CE3 /* SC_AllocPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_AllocPool.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_AllocPool.h; sourceTree = SOURCE_ROOT; };
 		2A5B1FAD3F30C8065C396ACB /* NetworkingUtilsWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtilsWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/NetworkingUtilsWin.cpp; sourceTree = SOURCE_ROOT; };
-		2A5FB3A96F17A3FD6401C28E /* scsynthsend.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = scsynthsend.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/scsynthsend.h; sourceTree = SOURCE_ROOT; };
 		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
 		2BE7216430113F333B8351ED /* ofxUIMinimalSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMinimalSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIMinimalSlider.cpp; sourceTree = SOURCE_ROOT; };
 		2BE782D7AEC00E59BE1F567F /* VerticalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VerticalTiltShifPass.h; path = ../../../addons/ofxPostProcessing/src/VerticalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
 		2C2B73DCDAF417A486A343EF /* VerticalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VerticalTiltShifPass.cpp; path = ../../../addons/ofxPostProcessing/src/VerticalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
-		2CCD2ABE67D7C21A39A12B34 /* SC_Errors.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Errors.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Errors.h; sourceTree = SOURCE_ROOT; };
 		2D394124F88F348AA4142DCF /* ofxUIImageToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageToggle.h; path = ../../../addons/ofxUI/src/ofxUIImageToggle.h; sourceTree = SOURCE_ROOT; };
-		2D76639CF3DA0FA822F4B3FE /* SC_Rate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Rate.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Rate.h; sourceTree = SOURCE_ROOT; };
-		2D94C623EAAFF1F9319FDC6A /* SC_UnitSpec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_UnitSpec.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_UnitSpec.h; sourceTree = SOURCE_ROOT; };
 		2DD185513A2875EC8A078670 /* ofxUIBiLabelSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIBiLabelSlider.h; path = ../../../addons/ofxUI/src/ofxUIBiLabelSlider.h; sourceTree = SOURCE_ROOT; };
 		2E4D32C5434E76331502160D /* b2BroadPhase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2BroadPhase.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2BroadPhase.cpp; sourceTree = SOURCE_ROOT; };
 		2ED633D856572E305A6ACCCF /* b2CollideEdge.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2CollideEdge.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2CollideEdge.cpp; sourceTree = SOURCE_ROOT; };
-		2FCF0D033BE7FAEE667B97B6 /* SC_WireSpec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_WireSpec.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_WireSpec.h; sourceTree = SOURCE_ROOT; };
 		2FD4B0329909D3527F003494 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
 		30CBAAEC78A0E9EBBB10A05A /* ofxUISpacer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISpacer.cpp; path = ../../../addons/ofxUI/src/ofxUISpacer.cpp; sourceTree = SOURCE_ROOT; };
 		31517A9D3D67D9C054954DC5 /* ofxUIDropDownList.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIDropDownList.cpp; path = ../../../addons/ofxUI/src/ofxUIDropDownList.cpp; sourceTree = SOURCE_ROOT; };
-		315E6B2D88BF913E9548A150 /* PriorityQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PriorityQueue.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/PriorityQueue.h; sourceTree = SOURCE_ROOT; };
 		32BD050A579633ADBCA5AF6B /* ofxUIWidget.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWidget.h; path = ../../../addons/ofxUI/src/ofxUIWidget.h; sourceTree = SOURCE_ROOT; };
 		334840CA6B3402C8C30CAC4E /* ofxUIOFWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIOFWrapper.h; path = ../../../addons/ofxUI/src/ofxUIOFWrapper.h; sourceTree = SOURCE_ROOT; };
-		36DD5C617BFB0E5A54E910F0 /* SC_Graph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Graph.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Graph.h; sourceTree = SOURCE_ROOT; };
-		3834335DE4CCC3D4F3C0668E /* SC_fftlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_fftlib.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_fftlib.h; sourceTree = SOURCE_ROOT; };
 		387A7E3D29B73F0E6D4AA670 /* ofxSuperCollider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSuperCollider.h; path = ../../../addons/ofxSuperCollider/src/ofxSuperCollider.h; sourceTree = SOURCE_ROOT; };
 		38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISuperCanvas.cpp; path = ../../../addons/ofxUI/src/ofxUISuperCanvas.cpp; sourceTree = SOURCE_ROOT; };
 		39062D5B674FF307E203AD78 /* b2PolygonShape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2PolygonShape.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2PolygonShape.cpp; sourceTree = SOURCE_ROOT; };
-		393CBF31696396A024A654D7 /* SC_List.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_List.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_List.h; sourceTree = SOURCE_ROOT; };
 		3AACD9661AF21261E24A05A4 /* ConvolutionPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConvolutionPass.cpp; path = ../../../addons/ofxPostProcessing/src/ConvolutionPass.cpp; sourceTree = SOURCE_ROOT; };
 		3B1C2C9AD397A02F5E8FE538 /* ofxSCResourceAllocator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSCResourceAllocator.cpp; path = ../../../addons/ofxSuperCollider/src/ofxSCResourceAllocator.cpp; sourceTree = SOURCE_ROOT; };
 		3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
 		3C10C48B1E9A15223A02411C /* b2ParticleAssembly.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2ParticleAssembly.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Particle/b2ParticleAssembly.cpp; sourceTree = SOURCE_ROOT; };
 		3C39EA8CB1911093FD56F9ED /* HorizontalTiltShifPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HorizontalTiltShifPass.h; path = ../../../addons/ofxPostProcessing/src/HorizontalTiltShifPass.h; sourceTree = SOURCE_ROOT; };
 		3C9066FB257B904A547019ED /* ofxUIDragableLabelButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIDragableLabelButton.h; path = ../../../addons/ofxUI/src/ofxUIDragableLabelButton.h; sourceTree = SOURCE_ROOT; };
-		3EDC245B14749BBF690C6ECD /* SC_Sem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Sem.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_Sem.h; sourceTree = SOURCE_ROOT; };
 		3FBD320860285A0147703AF6 /* b2MouseJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2MouseJoint.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2MouseJoint.cpp; sourceTree = SOURCE_ROOT; };
 		40389FEBF165732F45463608 /* b2Contact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Contact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2Contact.h; sourceTree = SOURCE_ROOT; };
 		4117B8C24D49837D3DF9C23B /* ofxUIToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIToggle.h; path = ../../../addons/ofxUI/src/ofxUIToggle.h; sourceTree = SOURCE_ROOT; };
 		413D610C698B244B80F30B41 /* b2StackQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2StackQueue.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Particle/b2StackQueue.h; sourceTree = SOURCE_ROOT; };
 		43BFEF0DECE8CE4E90624E1D /* ofxBox2dParticleSystem.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBox2dParticleSystem.cpp; path = ../../../addons/ofxLiquidFun/src/ofxBox2dParticleSystem.cpp; sourceTree = SOURCE_ROOT; };
 		444657A12E59D0ED86981498 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
-		464884828E9977C76957995A /* SC_BoundsMacros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_BoundsMacros.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_BoundsMacros.h; sourceTree = SOURCE_ROOT; };
 		46ACA73BEBDAB86471BA340F /* b2CollidePolygon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2CollidePolygon.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2CollidePolygon.cpp; sourceTree = SOURCE_ROOT; };
 		470B5D2AC2F616D10B2E6025 /* ofxUISlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISlider.h; path = ../../../addons/ofxUI/src/ofxUISlider.h; sourceTree = SOURCE_ROOT; };
-		4725C07C2615FD260E77ECCB /* ofxSuperColliderServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSuperColliderServer.h; path = ../../../addons/ofxSuperColliderServer_dist/src/ofxSuperColliderServer.h; sourceTree = SOURCE_ROOT; };
 		475041676C653EF6BAE942E6 /* b2Joint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Joint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2Joint.h; sourceTree = SOURCE_ROOT; };
 		47FE72C955F7382ACC0DCD42 /* ofxBox2dRect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBox2dRect.cpp; path = ../../../addons/ofxLiquidFun/src/ofxBox2dRect.cpp; sourceTree = SOURCE_ROOT; };
 		484F662699DFE8176E1B750F /* PostProcessing.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostProcessing.cpp; path = ../../../addons/ofxPostProcessing/src/PostProcessing.cpp; sourceTree = SOURCE_ROOT; };
@@ -347,46 +392,34 @@
 		48CCCEA0C681DE8B4945111B /* ofxUIToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIToggle.cpp; sourceTree = SOURCE_ROOT; };
 		48E4AC9F455A87F0448C70B2 /* ofxPostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPostProcessing.h; path = ../../../addons/ofxPostProcessing/src/ofxPostProcessing.h; sourceTree = SOURCE_ROOT; };
 		49360565D72BA519D4AE87BA /* b2EdgeAndPolygonContact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2EdgeAndPolygonContact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h; sourceTree = SOURCE_ROOT; };
-		499B9335A7586D43749C7ECE /* SC_InlineUnaryOp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_InlineUnaryOp.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_InlineUnaryOp.h; sourceTree = SOURCE_ROOT; };
 		49CAE27DC1D138037CF88ACF /* FxaaPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FxaaPass.h; path = ../../../addons/ofxPostProcessing/src/FxaaPass.h; sourceTree = SOURCE_ROOT; };
 		4A020350D99BFF434210ECF8 /* b2BlockAllocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2BlockAllocator.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2BlockAllocator.h; sourceTree = SOURCE_ROOT; };
 		4AEA0D08C3B0323FEDC8D974 /* ofxUIImageSampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageSampler.h; path = ../../../addons/ofxUI/src/ofxUIImageSampler.h; sourceTree = SOURCE_ROOT; };
-		4B2BF62FB156FBA5BB912A64 /* SC_DirUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_DirUtils.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_DirUtils.h; sourceTree = SOURCE_ROOT; };
 		4C9B919B991B4E45BC5DC0DB /* ofxUIRadio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRadio.h; path = ../../../addons/ofxUI/src/ofxUIRadio.h; sourceTree = SOURCE_ROOT; };
 		4CAE1D61C53FB3F11FBD94A5 /* ofxBox2d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2d.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2d.h; sourceTree = SOURCE_ROOT; };
-		4CF4D1665B52F5CCC505725B /* Rendezvous.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rendezvous.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/Rendezvous.h; sourceTree = SOURCE_ROOT; };
 		4D6E92CBBE97C46FB3832A5C /* ofxBox2dPolygon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBox2dPolygon.cpp; path = ../../../addons/ofxLiquidFun/src/ofxBox2dPolygon.cpp; sourceTree = SOURCE_ROOT; };
 		4D902D60E5CCFA9F2554BC7C /* ofxUIValuePlotter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIValuePlotter.cpp; path = ../../../addons/ofxUI/src/ofxUIValuePlotter.cpp; sourceTree = SOURCE_ROOT; };
 		4E5D352474E2100193463C35 /* b2EdgeAndPolygonContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2EdgeAndPolygonContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp; sourceTree = SOURCE_ROOT; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		4ED7BC3AF72F6BE8F0917A30 /* ofxUIImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImage.h; path = ../../../addons/ofxUI/src/ofxUIImage.h; sourceTree = SOURCE_ROOT; };
 		4EE485DD429295B380418787 /* b2EdgeAndCircleContact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2EdgeAndCircleContact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h; sourceTree = SOURCE_ROOT; };
-		4F79D6ABFAD622FDA08BFED7 /* SC_PlugIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_PlugIn.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_PlugIn.h; sourceTree = SOURCE_ROOT; };
 		4FF2F2D5A01ADA37A9ADE20F /* ofxUICanvas.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUICanvas.h; path = ../../../addons/ofxUI/src/ofxUICanvas.h; sourceTree = SOURCE_ROOT; };
 		50800DAB6C4B18E4F92166FC /* KaleidoscopePass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KaleidoscopePass.h; path = ../../../addons/ofxPostProcessing/src/KaleidoscopePass.h; sourceTree = SOURCE_ROOT; };
 		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
-		5170833316F31264812070E4 /* sc_msg_iter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sc_msg_iter.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/sc_msg_iter.h; sourceTree = SOURCE_ROOT; };
-		518B5A59525A9E587383EF22 /* fftlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fftlib.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/fftlib.h; sourceTree = SOURCE_ROOT; };
 		51F13E7D1E8A489721372010 /* ofxSCSynth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSCSynth.h; path = ../../../addons/ofxSuperCollider/src/ofxSCSynth.h; sourceTree = SOURCE_ROOT; };
 		5201F6A7A19258B7F1CA2E43 /* RGBShiftPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RGBShiftPass.cpp; path = ../../../addons/ofxPostProcessing/src/RGBShiftPass.cpp; sourceTree = SOURCE_ROOT; };
 		524719D2C0739781C5FBDB6A /* b2Draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2Draw.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Draw.cpp; sourceTree = SOURCE_ROOT; };
 		531D8D09739D338239967B3A /* ofxUIDropDownList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIDropDownList.h; path = ../../../addons/ofxUI/src/ofxUIDropDownList.h; sourceTree = SOURCE_ROOT; };
-		5335C90F73DD2350A1238004 /* SC_SndBuf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_SndBuf.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_SndBuf.h; sourceTree = SOURCE_ROOT; };
 		54F36382628E4D0FF07206D7 /* RenderPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RenderPass.cpp; path = ../../../addons/ofxPostProcessing/src/RenderPass.cpp; sourceTree = SOURCE_ROOT; };
 		5613D5D24B00D8AD909F7E6A /* ofxUISortableList.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISortableList.cpp; path = ../../../addons/ofxUI/src/ofxUISortableList.cpp; sourceTree = SOURCE_ROOT; };
-		5621CB50DA42B40670E536DB /* Hash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Hash.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/Hash.h; sourceTree = SOURCE_ROOT; };
 		56EEF938FCB07CDFA1491061 /* b2DynamicTree.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2DynamicTree.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2DynamicTree.h; sourceTree = SOURCE_ROOT; };
 		5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocketWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/UdpSocketWin.cpp; sourceTree = SOURCE_ROOT; };
 		5AD807D1AF254F978AB20B1C /* ofxUIWidgetWithLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWidgetWithLabel.cpp; path = ../../../addons/ofxUI/src/ofxUIWidgetWithLabel.cpp; sourceTree = SOURCE_ROOT; };
-		5BA58DA52C7C58929453E0D2 /* SC_Reply.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Reply.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_Reply.h; sourceTree = SOURCE_ROOT; };
 		5BC56A60E911F7488A58830A /* NoiseWarpPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NoiseWarpPass.cpp; path = ../../../addons/ofxPostProcessing/src/NoiseWarpPass.cpp; sourceTree = SOURCE_ROOT; };
 		5C0483B6F7B4740C77611766 /* b2Math.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2Math.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Math.cpp; sourceTree = SOURCE_ROOT; };
 		5C48E3511951BB86FA9AA642 /* ofxUIMovingGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMovingGraph.h; path = ../../../addons/ofxUI/src/ofxUIMovingGraph.h; sourceTree = SOURCE_ROOT; };
-		5D47F7981F8A7DF282760883 /* SC_GraphDef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_GraphDef.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_GraphDef.h; sourceTree = SOURCE_ROOT; };
 		5E46F7EC33962A73E32EF63E /* ofxBox2dPolygonUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dPolygonUtils.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2dPolygonUtils.h; sourceTree = SOURCE_ROOT; };
 		5E62D62D32EFCA8D05DDAD1A /* ofxUIWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWrapper.h; path = ../../../addons/ofxUI/src/ofxUIWrapper.h; sourceTree = SOURCE_ROOT; };
-		5EA815C9F137DA431FC3E0D9 /* SC_Lib_Cintf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Lib_Cintf.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Lib_Cintf.h; sourceTree = SOURCE_ROOT; };
-		5FF571B316F466D3A2D2B5C6 /* SC_StringParser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_StringParser.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_StringParser.h; sourceTree = SOURCE_ROOT; };
 		60548463096D7A16B511C649 /* b2WeldJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2WeldJoint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2WeldJoint.h; sourceTree = SOURCE_ROOT; };
 		619F900B8B36F185A8F81C8C /* b2CircleContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2CircleContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2CircleContact.cpp; sourceTree = SOURCE_ROOT; };
 		6248640C06B47042BB5BD3F2 /* ofxUILabelToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUILabelToggle.h; path = ../../../addons/ofxUI/src/ofxUILabelToggle.h; sourceTree = SOURCE_ROOT; };
@@ -401,9 +434,7 @@
 		653CFAE31336DAA04B1F1503 /* ofxUI2DGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUI2DGraph.h; path = ../../../addons/ofxUI/src/ofxUI2DGraph.h; sourceTree = SOURCE_ROOT; };
 		658E849B1BF88412C8ED4ABF /* b2Island.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Island.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/b2Island.h; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
-		6631D396B605A4BADFE86217 /* ReadWriteMacros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ReadWriteMacros.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/ReadWriteMacros.h; sourceTree = SOURCE_ROOT; };
 		664D65407BE633C038FA9498 /* ofxUIFPSSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIFPSSlider.h; path = ../../../addons/ofxUI/src/ofxUIFPSSlider.h; sourceTree = SOURCE_ROOT; };
-		66ED56EE16D0EC260DC34C37 /* SC_StringBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_StringBuffer.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_StringBuffer.h; sourceTree = SOURCE_ROOT; };
 		66FACE31A6E04CD347501787 /* b2GearJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2GearJoint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2GearJoint.h; sourceTree = SOURCE_ROOT; };
 		676663CCD2647B8EF069B39C /* b2TimeOfImpact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2TimeOfImpact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2TimeOfImpact.h; sourceTree = SOURCE_ROOT; };
 		6788311DC7D945282047837A /* ContrastPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ContrastPass.cpp; path = ../../../addons/ofxPostProcessing/src/ContrastPass.cpp; sourceTree = SOURCE_ROOT; };
@@ -417,17 +448,12 @@
 		6C12DA142EC60F5BF1279CC1 /* b2MotorJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2MotorJoint.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2MotorJoint.cpp; sourceTree = SOURCE_ROOT; };
 		6E42D1545C05DC5969830FA7 /* b2ContactManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2ContactManager.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/b2ContactManager.h; sourceTree = SOURCE_ROOT; };
 		6E6663A9916623069BB41749 /* b2WorldCallbacks.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2WorldCallbacks.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/b2WorldCallbacks.h; sourceTree = SOURCE_ROOT; };
-		6F8C78899985B22162F4ADE6 /* SC_Str4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Str4.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Str4.h; sourceTree = SOURCE_ROOT; };
 		702A2528CA64B397E9B91ABE /* ofxUIToggleMatrix.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIToggleMatrix.cpp; path = ../../../addons/ofxUI/src/ofxUIToggleMatrix.cpp; sourceTree = SOURCE_ROOT; };
-		70FDE43CEFE83AF7EDC48842 /* MsgFifo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MsgFifo.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/MsgFifo.h; sourceTree = SOURCE_ROOT; };
 		71165AEA4999A7487A0D4AC8 /* dpoint.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = dpoint.hpp; path = ../../../addons/ofxLiquidFun/libs/triangle/dpoint.hpp; sourceTree = SOURCE_ROOT; };
 		711A1B0C42A1F0CA79CB9EF3 /* b2EdgeAndCircleContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2EdgeAndCircleContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp; sourceTree = SOURCE_ROOT; };
-		718BE37ECE033CEF664C2D89 /* SC_Group.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Group.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Group.h; sourceTree = SOURCE_ROOT; };
-		71D0486FA47FFDDB6C93F63B /* clz.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = clz.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/clz.h; sourceTree = SOURCE_ROOT; };
 		7462D018F6D6E407E598A021 /* PixelatePass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PixelatePass.cpp; path = ../../../addons/ofxPostProcessing/src/PixelatePass.cpp; sourceTree = SOURCE_ROOT; };
 		74BDDD14F49833AD24862E87 /* RimHighlightingPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RimHighlightingPass.cpp; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.cpp; sourceTree = SOURCE_ROOT; };
 		754B2905967F6DA1C95A0534 /* ofxBox2dJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBox2dJoint.cpp; path = ../../../addons/ofxLiquidFun/src/ofxBox2dJoint.cpp; sourceTree = SOURCE_ROOT; };
-		75B9BE4387BB95C552CDEFA8 /* OSC_Packet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OSC_Packet.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/OSC_Packet.h; sourceTree = SOURCE_ROOT; };
 		7689F8A0F3D0B7635A8C3104 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
 		76AF3B44E0E2FA8BFBD5F592 /* ofxUILabelToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUILabelToggle.cpp; path = ../../../addons/ofxUI/src/ofxUILabelToggle.cpp; sourceTree = SOURCE_ROOT; };
 		76BB8994C3B8A22D06F5D756 /* b2TimeStep.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2TimeStep.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/b2TimeStep.h; sourceTree = SOURCE_ROOT; };
@@ -435,9 +461,7 @@
 		7965EE214E4C332003852642 /* ofxUIMovingGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMovingGraph.cpp; path = ../../../addons/ofxUI/src/ofxUIMovingGraph.cpp; sourceTree = SOURCE_ROOT; };
 		796A8CF08F426D78B85A26DA /* b2Fixture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Fixture.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/b2Fixture.h; sourceTree = SOURCE_ROOT; };
 		79CC5E74F79F1FB86A9C0642 /* ofxBox2dUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dUtils.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2dUtils.h; sourceTree = SOURCE_ROOT; };
-		7CDEA0A597723030A9B811BF /* SC_Altivec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Altivec.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_Altivec.h; sourceTree = SOURCE_ROOT; };
 		7DF675A00ECFBF83B613003D /* del_impl.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = del_impl.cpp; path = ../../../addons/ofxLiquidFun/libs/triangle/del_impl.cpp; sourceTree = SOURCE_ROOT; };
-		7E788CD6944983A5E378BC45 /* SC_ComPort.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_ComPort.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_ComPort.h; sourceTree = SOURCE_ROOT; };
 		7E7E592342D8B7FB73A6F64D /* ofxUIFPSSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIFPSSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIFPSSlider.cpp; sourceTree = SOURCE_ROOT; };
 		7F695FA1755C73D7AA55D25A /* ofxGLSLSimplexNoise.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGLSLSimplexNoise.h; path = ../../../addons/ofxGLSLSimplexNoise/src/ofxGLSLSimplexNoise.h; sourceTree = SOURCE_ROOT; };
 		8178EB9AA3C0268331AF3AF3 /* ofxUIToggleMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIToggleMatrix.h; path = ../../../addons/ofxUI/src/ofxUIToggleMatrix.h; sourceTree = SOURCE_ROOT; };
@@ -462,7 +486,6 @@
 		8B30E93FD3D3475EED522A0E /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
 		8B5F60B902BFFD95E99AAB34 /* ofxUIImageSampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageSampler.cpp; path = ../../../addons/ofxUI/src/ofxUIImageSampler.cpp; sourceTree = SOURCE_ROOT; };
 		8C75AFC8774A62495DD53464 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
-		8E77739C15F160B7DF7E2309 /* SC_Constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Constants.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Constants.h; sourceTree = SOURCE_ROOT; };
 		8E898A6CE8D5E03AC5BE8A92 /* b2PolygonShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2PolygonShape.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2PolygonShape.h; sourceTree = SOURCE_ROOT; };
 		8F7D91E6C1D0A50F2EEEF8D6 /* ofxBox2dBaseShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dBaseShape.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2dBaseShape.h; sourceTree = SOURCE_ROOT; };
 		8F8238006E98A8E39851968C /* ofxUIButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIButton.cpp; path = ../../../addons/ofxUI/src/ofxUIButton.cpp; sourceTree = SOURCE_ROOT; };
@@ -470,13 +493,9 @@
 		9222AE2464AE1CF72876A4ED /* LimbDarkeningPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LimbDarkeningPass.cpp; path = ../../../addons/ofxPostProcessing/src/LimbDarkeningPass.cpp; sourceTree = SOURCE_ROOT; };
 		9345327AA463407B3DADBADE /* ofxUIWaveform.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWaveform.cpp; path = ../../../addons/ofxUI/src/ofxUIWaveform.cpp; sourceTree = SOURCE_ROOT; };
 		938F5A098A216B403906129C /* ofxUIImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImage.cpp; path = ../../../addons/ofxUI/src/ofxUIImage.cpp; sourceTree = SOURCE_ROOT; };
-		9404A2A42C85374257B5C1BA /* SC_SynthDef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_SynthDef.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_SynthDef.h; sourceTree = SOURCE_ROOT; };
 		9425843AEC3118B8FDEF1B0B /* FxaaPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FxaaPass.cpp; path = ../../../addons/ofxPostProcessing/src/FxaaPass.cpp; sourceTree = SOURCE_ROOT; };
-		9431BE58EAFD96E228577230 /* SC_Prototypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Prototypes.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Prototypes.h; sourceTree = SOURCE_ROOT; };
-		9500AF24F83229803ECCE087 /* SC_Win32Utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Win32Utils.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_Win32Utils.h; sourceTree = SOURCE_ROOT; };
 		959A8ED752EE138270517962 /* b2GearJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2GearJoint.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2GearJoint.cpp; sourceTree = SOURCE_ROOT; };
 		961DE8B564EF22E65C9480AE /* ofxUI2DPad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUI2DPad.h; path = ../../../addons/ofxUI/src/ofxUI2DPad.h; sourceTree = SOURCE_ROOT; };
-		973781E4D417B4D3A0474565 /* HashTable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HashTable.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/HashTable.h; sourceTree = SOURCE_ROOT; };
 		99A020451B526122BD37D312 /* b2Shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Shape.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2Shape.h; sourceTree = SOURCE_ROOT; };
 		9AACF31BAE533E8F81AD4043 /* LUTPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LUTPass.h; path = ../../../addons/ofxPostProcessing/src/LUTPass.h; sourceTree = SOURCE_ROOT; };
 		9B00AC12EF1E037DB40F8E24 /* b2Rope.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Rope.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Rope/b2Rope.h; sourceTree = SOURCE_ROOT; };
@@ -493,7 +512,6 @@
 		A0AB6F894B7B47CE3D8D1782 /* b2Collision.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2Collision.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2Collision.cpp; sourceTree = SOURCE_ROOT; };
 		A2AAA8CA403479E6FCDF920E /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
 		A47F3891070B93763C21F7C0 /* b2EdgeShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2EdgeShape.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2EdgeShape.h; sourceTree = SOURCE_ROOT; };
-		A52816F075D1B5C28D0BDA16 /* SC_SequencedCommand.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_SequencedCommand.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_SequencedCommand.h; sourceTree = SOURCE_ROOT; };
 		A64B8AA7481267CD4A76C16B /* ofxUITabBar.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITabBar.cpp; path = ../../../addons/ofxUI/src/ofxUITabBar.cpp; sourceTree = SOURCE_ROOT; };
 		A7D31BD6350F68A08851CD97 /* b2BlockAllocator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2BlockAllocator.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2BlockAllocator.cpp; sourceTree = SOURCE_ROOT; };
 		A8896AC3BECAAA504E3828F4 /* ofxUIEventArgs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIEventArgs.cpp; path = ../../../addons/ofxUI/src/ofxUIEventArgs.cpp; sourceTree = SOURCE_ROOT; };
@@ -517,7 +535,6 @@
 		B678094A3063DF6F41F12CCB /* b2RopeJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2RopeJoint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2RopeJoint.h; sourceTree = SOURCE_ROOT; };
 		B807D9F9F827853C14591618 /* b2CollideCircle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2CollideCircle.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2CollideCircle.cpp; sourceTree = SOURCE_ROOT; };
 		B848522CCA3A75ABD56752C9 /* ofxUIImageToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIImageToggle.cpp; sourceTree = SOURCE_ROOT; };
-		B9DF8DDF4231DBF0EFF4855E /* SC_InlineBinaryOp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_InlineBinaryOp.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_InlineBinaryOp.h; sourceTree = SOURCE_ROOT; };
 		BAA4E229C246D7B615917505 /* ZoomBlurPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ZoomBlurPass.h; path = ../../../addons/ofxPostProcessing/src/ZoomBlurPass.h; sourceTree = SOURCE_ROOT; };
 		BB644064DB39B263E7BCE7E6 /* b2BroadPhase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2BroadPhase.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2BroadPhase.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -528,7 +545,6 @@
 		BFD3387AA9EFA53E1B4F087B /* ofxUIScrollableCanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIScrollableCanvas.cpp; path = ../../../addons/ofxUI/src/ofxUIScrollableCanvas.cpp; sourceTree = SOURCE_ROOT; };
 		C07AAE715D8853EDA76BC909 /* GodRaysPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GodRaysPass.cpp; path = ../../../addons/ofxPostProcessing/src/GodRaysPass.cpp; sourceTree = SOURCE_ROOT; };
 		C090D9C89167F60F841E6830 /* b2MotorJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2MotorJoint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2MotorJoint.h; sourceTree = SOURCE_ROOT; };
-		C122640389835CFA3724C028 /* SC_Lib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Lib.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Lib.h; sourceTree = SOURCE_ROOT; };
 		C127DCF305861E6D5D6332E6 /* SSAOPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SSAOPass.cpp; path = ../../../addons/ofxPostProcessing/src/SSAOPass.cpp; sourceTree = SOURCE_ROOT; };
 		C161222F68D4F7CE28BC4F61 /* ofxUIBaseDraws.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIBaseDraws.h; path = ../../../addons/ofxUI/src/ofxUIBaseDraws.h; sourceTree = SOURCE_ROOT; };
 		C173FDE7D0BF051590D2AD22 /* ofxSCGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSCGroup.h; path = ../../../addons/ofxSuperCollider/src/ofxSCGroup.h; sourceTree = SOURCE_ROOT; };
@@ -542,7 +558,6 @@
 		C64B88209AF231B4FC8B4056 /* FakeSSSPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FakeSSSPass.cpp; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.cpp; sourceTree = SOURCE_ROOT; };
 		C6937888E126BADC8777423B /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
 		C69CBE4E4FA9530657A6CD23 /* FakeSSSPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FakeSSSPass.h; path = ../../../addons/ofxPostProcessing/src/FakeSSSPass.h; sourceTree = SOURCE_ROOT; };
-		C70BB0BE791A33F9317D06A2 /* SC_VFP11.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_VFP11.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_VFP11.h; sourceTree = SOURCE_ROOT; };
 		C7B4B8AD9464A693A3683D0F /* ofxUISpacer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISpacer.h; path = ../../../addons/ofxUI/src/ofxUISpacer.h; sourceTree = SOURCE_ROOT; };
 		C832876EEA392AEFE722F5C6 /* b2PolygonAndCircleContact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2PolygonAndCircleContact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h; sourceTree = SOURCE_ROOT; };
 		C917BCE6EC7CF9A4F0BB7E29 /* ofxBox2dCircle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dCircle.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2dCircle.h; sourceTree = SOURCE_ROOT; };
@@ -552,14 +567,12 @@
 		CD5FE0ECCE12770E2C979C41 /* b2CircleContact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2CircleContact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2CircleContact.h; sourceTree = SOURCE_ROOT; };
 		CEBAA02AE8A2F4E8EFB3EF3A /* ofxSCNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSCNode.cpp; path = ../../../addons/ofxSuperCollider/src/ofxSCNode.cpp; sourceTree = SOURCE_ROOT; };
 		CF73E1AF93352CF515E7C9F2 /* ofxUIEventArgs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIEventArgs.h; path = ../../../addons/ofxUI/src/ofxUIEventArgs.h; sourceTree = SOURCE_ROOT; };
-		D0D831C31A7F7394AD4607B3 /* SC_sndfile_stub.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_sndfile_stub.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_sndfile_stub.h; sourceTree = SOURCE_ROOT; };
 		D0EEEF732FED40A83843C5A6 /* ofxBox2dContactListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBox2dContactListener.h; path = ../../../addons/ofxLiquidFun/src/ofxBox2dContactListener.h; sourceTree = SOURCE_ROOT; };
 		D12718CF0D86D6F996AB7E85 /* b2Timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Timer.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Timer.h; sourceTree = SOURCE_ROOT; };
 		D1387F25A47EF6809B55B59C /* ofxUIValuePlotter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIValuePlotter.h; path = ../../../addons/ofxUI/src/ofxUIValuePlotter.h; sourceTree = SOURCE_ROOT; };
 		D264C2ACDD25E897684F3F4A /* b2FrictionJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2FrictionJoint.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2FrictionJoint.h; sourceTree = SOURCE_ROOT; };
 		D2CBC7E2CA2B0A7F1ABFF549 /* b2StackAllocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2StackAllocator.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2StackAllocator.h; sourceTree = SOURCE_ROOT; };
 		D41ED8C8083845703AA1FDFA /* BloomPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BloomPass.cpp; path = ../../../addons/ofxPostProcessing/src/BloomPass.cpp; sourceTree = SOURCE_ROOT; };
-		D447524045189CA4FFAD4D96 /* SC_UnitDef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_UnitDef.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_UnitDef.h; sourceTree = SOURCE_ROOT; };
 		D45991C927E805C3B1AD7516 /* ofxUITabBar.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITabBar.h; path = ../../../addons/ofxUI/src/ofxUITabBar.h; sourceTree = SOURCE_ROOT; };
 		D66E735BE796BC0675320DC8 /* ofxUIImageSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageSlider.h; path = ../../../addons/ofxUI/src/ofxUIImageSlider.h; sourceTree = SOURCE_ROOT; };
 		D69EEDD422CB44550490C07E /* triangle_impl.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = triangle_impl.hpp; path = ../../../addons/ofxLiquidFun/libs/triangle/triangle_impl.hpp; sourceTree = SOURCE_ROOT; };
@@ -569,7 +582,6 @@
 		D7E3A77FD90B912618E2ED24 /* b2FreeList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2FreeList.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2FreeList.h; sourceTree = SOURCE_ROOT; };
 		D8CD810734AC617189BB36CF /* b2Settings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2Settings.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Settings.cpp; sourceTree = SOURCE_ROOT; };
 		D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscTypes.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp; sourceTree = SOURCE_ROOT; };
-		DA5E5CA19728E0743448432A /* sc_popen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sc_popen.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/sc_popen.h; sourceTree = SOURCE_ROOT; };
 		DA60FE786380E662A73BD486 /* b2ParticleAssembly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2ParticleAssembly.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Particle/b2ParticleAssembly.h; sourceTree = SOURCE_ROOT; };
 		DACACDF2F37260A0BFF826E2 /* PostProcessing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostProcessing.h; path = ../../../addons/ofxPostProcessing/src/PostProcessing.h; sourceTree = SOURCE_ROOT; };
 		DBE31D52BCB0CE44B9D154F0 /* ofxUITextArea.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITextArea.cpp; path = ../../../addons/ofxUI/src/ofxUITextArea.cpp; sourceTree = SOURCE_ROOT; };
@@ -605,7 +617,6 @@
 		E6280B5FA1CEA20450916E49 /* ofxUIImageButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageButton.cpp; path = ../../../addons/ofxUI/src/ofxUIImageButton.cpp; sourceTree = SOURCE_ROOT; };
 		E65D547C2CD6A84FC9AF15FA /* ofxUITextInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITextInput.h; path = ../../../addons/ofxUI/src/ofxUITextInput.h; sourceTree = SOURCE_ROOT; };
 		E67BC70E17DDA0081C8FD9DD /* ofxUIImageButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageButton.h; path = ../../../addons/ofxUI/src/ofxUIImageButton.h; sourceTree = SOURCE_ROOT; };
-		E6C676C40BF20BF2F7198913 /* ofxSuperColliderServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSuperColliderServer.cpp; path = ../../../addons/ofxSuperColliderServer_dist/src/ofxSuperColliderServer.cpp; sourceTree = SOURCE_ROOT; };
 		E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocket.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.cpp; sourceTree = SOURCE_ROOT; };
 		E71733956CD601886837BE2E /* ofxUICanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUICanvas.cpp; path = ../../../addons/ofxUI/src/ofxUICanvas.cpp; sourceTree = SOURCE_ROOT; };
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -615,11 +626,8 @@
 		E84ADD8443D82E35430385B7 /* RimHighlightingPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RimHighlightingPass.h; path = ../../../addons/ofxPostProcessing/src/RimHighlightingPass.h; sourceTree = SOURCE_ROOT; };
 		E88F5D4D5E360FA5B5C8F99E /* ofxUISortableList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISortableList.h; path = ../../../addons/ofxUI/src/ofxUISortableList.h; sourceTree = SOURCE_ROOT; };
 		E9AA0B86DA28A2146E5EC5CB /* b2Distance.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2Distance.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/b2Distance.cpp; sourceTree = SOURCE_ROOT; };
-		EA198E0A3253189ECD26BDFB /* SC_FIFO.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_FIFO.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_FIFO.h; sourceTree = SOURCE_ROOT; };
 		EA2A13781712672758AFD432 /* DofAltPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DofAltPass.h; path = ../../../addons/ofxPostProcessing/src/DofAltPass.h; sourceTree = SOURCE_ROOT; };
-		EA7CFAF7736346A4A0C01772 /* SC_Types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Types.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Types.h; sourceTree = SOURCE_ROOT; };
 		EA7E326BE942859474CAC949 /* b2PrismaticJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2PrismaticJoint.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp; sourceTree = SOURCE_ROOT; };
-		EB6084CBD7F074095E7ECE2D /* SC_Endian.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Endian.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_Endian.h; sourceTree = SOURCE_ROOT; };
 		ED304DDB3E041B23D722041E /* b2FrictionJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2FrictionJoint.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints/b2FrictionJoint.cpp; sourceTree = SOURCE_ROOT; };
 		EDDEDDA1AAF0588E9024E015 /* ofxSCNode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSCNode.h; path = ../../../addons/ofxSuperCollider/src/ofxSCNode.h; sourceTree = SOURCE_ROOT; };
 		EDFEB3D8C9183ADE3FACB4B5 /* ofxUICircleSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUICircleSlider.h; path = ../../../addons/ofxUI/src/ofxUICircleSlider.h; sourceTree = SOURCE_ROOT; };
@@ -636,17 +644,14 @@
 		F4F5B6B8BA2BD52C646ED908 /* OscException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscException.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscException.h; sourceTree = SOURCE_ROOT; };
 		F531CAC5B6483B4596C50946 /* b2PolygonAndCircleContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2PolygonAndCircleContact.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp; sourceTree = SOURCE_ROOT; };
 		F5DB1AC24B8010FC3C556AAC /* RenderPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RenderPass.h; path = ../../../addons/ofxPostProcessing/src/RenderPass.h; sourceTree = SOURCE_ROOT; };
-		F715780C67F2BDE6EF4DC3C7 /* SC_BufGen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_BufGen.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_BufGen.h; sourceTree = SOURCE_ROOT; };
 		F7B28FF0B9D1B1B1ED8CE789 /* ofxSCSynth.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSCSynth.cpp; path = ../../../addons/ofxSuperCollider/src/ofxSCSynth.cpp; sourceTree = SOURCE_ROOT; };
 		F7D4AA3416B8E200813F17A3 /* b2Draw.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Draw.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Draw.h; sourceTree = SOURCE_ROOT; };
 		F7FBC56859535E597B24BB91 /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkingUtils.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
 		F8B50901E96049FCFBA6043E /* b2CircleShape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2CircleShape.cpp; path = ../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes/b2CircleShape.cpp; sourceTree = SOURCE_ROOT; };
-		F96BABB60AB8ED6F45FEED86 /* SC_Unit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Unit.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/plugin_interface/SC_Unit.h; sourceTree = SOURCE_ROOT; };
 		F98D3119B492CAFA65819DDA /* ContrastPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ContrastPass.h; path = ../../../addons/ofxPostProcessing/src/ContrastPass.h; sourceTree = SOURCE_ROOT; };
 		F9A4454B00CCFD7265D3CA85 /* ofxUILabelButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUILabelButton.cpp; path = ../../../addons/ofxUI/src/ofxUILabelButton.cpp; sourceTree = SOURCE_ROOT; };
 		F9DF961B5E7D4C4E1E5D029C /* ofxUITextArea.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITextArea.h; path = ../../../addons/ofxUI/src/ofxUITextArea.h; sourceTree = SOURCE_ROOT; };
 		F9E69702DE151AD76690D1CF /* NoiseWarpPass.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NoiseWarpPass.h; path = ../../../addons/ofxPostProcessing/src/NoiseWarpPass.h; sourceTree = SOURCE_ROOT; };
-		F9FB9B38607F7D4B67C6A4D5 /* SC_Complex.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_Complex.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/server/SC_Complex.h; sourceTree = SOURCE_ROOT; };
 		FA3C975BF61DA2D55716B377 /* b2ChainAndCircleContact.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2ChainAndCircleContact.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h; sourceTree = SOURCE_ROOT; };
 		FAF7EF26FE0FF19EA6D9419D /* HorizontalTiltShifPass.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HorizontalTiltShifPass.cpp; path = ../../../addons/ofxPostProcessing/src/HorizontalTiltShifPass.cpp; sourceTree = SOURCE_ROOT; };
 		FBE1B379902B3C585DC8F7A2 /* ofxUILabelButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUILabelButton.h; path = ../../../addons/ofxUI/src/ofxUILabelButton.h; sourceTree = SOURCE_ROOT; };
@@ -655,7 +660,6 @@
 		FCCBDB55B98DA36682809F03 /* ofxUIWaveform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWaveform.h; path = ../../../addons/ofxUI/src/ofxUIWaveform.h; sourceTree = SOURCE_ROOT; };
 		FDA2832E78CFA22BEEC74160 /* ofxUIFPS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIFPS.h; path = ../../../addons/ofxUI/src/ofxUIFPS.h; sourceTree = SOURCE_ROOT; };
 		FEB61645EF9120F5BACB7462 /* ofxUIFPS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIFPS.cpp; path = ../../../addons/ofxUI/src/ofxUIFPS.cpp; sourceTree = SOURCE_ROOT; };
-		FEEA5AE3AE5CA5348318866C /* SC_StandAloneInfo_Darwin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SC_StandAloneInfo_Darwin.h; path = ../../../addons/ofxSuperColliderServer_dist/libs/supercollider/include/common/SC_StandAloneInfo_Darwin.h; sourceTree = SOURCE_ROOT; };
 		FF74364ECFD053959A0EEE5A /* b2Math.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Math.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Math.h; sourceTree = SOURCE_ROOT; };
 		FFD5D3C9D38E29DB72B32254 /* ofxUIDragableLabelButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIDragableLabelButton.cpp; path = ../../../addons/ofxUI/src/ofxUIDragableLabelButton.cpp; sourceTree = SOURCE_ROOT; };
 		FFD8AF1FF70280210944CD2C /* b2Stat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = b2Stat.h; path = ../../../addons/ofxLiquidFun/libs/Box2D/Common/b2Stat.h; sourceTree = SOURCE_ROOT; };
@@ -666,6 +670,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189CAC1C1B8C511600B8F92C /* libscsynth.a in Frameworks */,
+				189CAC1D1B8C511600B8F92C /* libsndfile.a in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
@@ -688,13 +694,148 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E24A7AF6FEAAEA483F4779A /* src */ = {
+		189CABAB1B8C503100B8F92C /* ofxSuperColliderServer */ = {
 			isa = PBXGroup;
 			children = (
-				E6C676C40BF20BF2F7198913 /* ofxSuperColliderServer.cpp */,
-				4725C07C2615FD260E77ECCB /* ofxSuperColliderServer.h */,
+				189CABC11B8C503100B8F92C /* libs */,
+				189CAC0E1B8C503100B8F92C /* src */,
 			);
-			name = src;
+			name = ofxSuperColliderServer;
+			path = ../../../addons/ofxSuperColliderServer;
+			sourceTree = "<group>";
+		};
+		189CABC11B8C503100B8F92C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				189CABC21B8C503100B8F92C /* supercollider */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		189CABC21B8C503100B8F92C /* supercollider */ = {
+			isa = PBXGroup;
+			children = (
+				189CABC31B8C503100B8F92C /* include */,
+				189CAC0B1B8C503100B8F92C /* lib */,
+			);
+			path = supercollider;
+			sourceTree = "<group>";
+		};
+		189CABC31B8C503100B8F92C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				189CABC41B8C503100B8F92C /* common */,
+				189CABD61B8C503100B8F92C /* plugin_interface */,
+				189CABEF1B8C503100B8F92C /* server */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		189CABC41B8C503100B8F92C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				189CABC51B8C503100B8F92C /* dfftlib.h */,
+				189CABC61B8C503100B8F92C /* fftlib.h */,
+				189CABC71B8C503100B8F92C /* SC_AllocPool.h */,
+				189CABC81B8C503100B8F92C /* SC_Altivec.h */,
+				189CABC91B8C503100B8F92C /* SC_DirUtils.h */,
+				189CABCA1B8C503100B8F92C /* SC_Endian.h */,
+				189CABCB1B8C503100B8F92C /* SC_fftlib.h */,
+				189CABCC1B8C503100B8F92C /* SC_FIFO.h */,
+				189CABCD1B8C503100B8F92C /* sc_popen.h */,
+				189CABCE1B8C503100B8F92C /* SC_Reply.h */,
+				189CABCF1B8C503100B8F92C /* SC_Sem.h */,
+				189CABD01B8C503100B8F92C /* SC_StandAloneInfo_Darwin.h */,
+				189CABD11B8C503100B8F92C /* SC_StringBuffer.h */,
+				189CABD21B8C503100B8F92C /* SC_StringParser.h */,
+				189CABD31B8C503100B8F92C /* SC_VFP11.h */,
+				189CABD41B8C503100B8F92C /* SC_Win32Utils.h */,
+				189CABD51B8C503100B8F92C /* scsynthsend.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		189CABD61B8C503100B8F92C /* plugin_interface */ = {
+			isa = PBXGroup;
+			children = (
+				189CABD71B8C503100B8F92C /* clz.h */,
+				189CABD81B8C503100B8F92C /* Hash.h */,
+				189CABD91B8C503100B8F92C /* SC_BoundsMacros.h */,
+				189CABDA1B8C503100B8F92C /* SC_BufGen.h */,
+				189CABDB1B8C503100B8F92C /* SC_Constants.h */,
+				189CABDC1B8C503100B8F92C /* SC_DemandUnit.h */,
+				189CABDD1B8C503100B8F92C /* SC_FifoMsg.h */,
+				189CABDE1B8C503100B8F92C /* SC_Graph.h */,
+				189CABDF1B8C503100B8F92C /* SC_InlineBinaryOp.h */,
+				189CABE01B8C503100B8F92C /* SC_InlineUnaryOp.h */,
+				189CABE11B8C503100B8F92C /* SC_InterfaceTable.h */,
+				189CABE21B8C503100B8F92C /* sc_msg_iter.h */,
+				189CABE31B8C503100B8F92C /* SC_Node.h */,
+				189CABE41B8C503100B8F92C /* SC_PlugIn.h */,
+				189CABE51B8C503100B8F92C /* SC_Rate.h */,
+				189CABE61B8C503100B8F92C /* SC_RGen.h */,
+				189CABE71B8C503100B8F92C /* SC_SndBuf.h */,
+				189CABE81B8C503100B8F92C /* SC_sndfile_stub.h */,
+				189CABE91B8C503100B8F92C /* SC_Types.h */,
+				189CABEA1B8C503100B8F92C /* SC_Unit.h */,
+				189CABEB1B8C503100B8F92C /* SC_Wire.h */,
+				189CABEC1B8C503100B8F92C /* SC_World.h */,
+				189CABED1B8C503100B8F92C /* SC_WorldOptions.h */,
+				189CABEE1B8C503100B8F92C /* Unroll.h */,
+			);
+			path = plugin_interface;
+			sourceTree = "<group>";
+		};
+		189CABEF1B8C503100B8F92C /* server */ = {
+			isa = PBXGroup;
+			children = (
+				189CABF01B8C503100B8F92C /* HashTable.h */,
+				189CABF11B8C503100B8F92C /* MsgFifo.h */,
+				189CABF21B8C503100B8F92C /* OSC_Packet.h */,
+				189CABF31B8C503100B8F92C /* PriorityQueue.h */,
+				189CABF41B8C503100B8F92C /* ReadWriteMacros.h */,
+				189CABF51B8C503100B8F92C /* Rendezvous.h */,
+				189CABF61B8C503100B8F92C /* SC_AU.h */,
+				189CABF71B8C503100B8F92C /* SC_Complex.h */,
+				189CABF81B8C503100B8F92C /* SC_ComPort.h */,
+				189CABF91B8C503100B8F92C /* SC_CoreAudio.h */,
+				189CABFA1B8C503100B8F92C /* SC_Errors.h */,
+				189CABFB1B8C503100B8F92C /* SC_GraphDef.h */,
+				189CABFC1B8C503100B8F92C /* SC_Group.h */,
+				189CABFD1B8C503100B8F92C /* SC_HiddenWorld.h */,
+				189CABFE1B8C503100B8F92C /* SC_Lib.h */,
+				189CABFF1B8C503100B8F92C /* SC_Lib_Cintf.h */,
+				189CAC001B8C503100B8F92C /* SC_List.h */,
+				189CAC011B8C503100B8F92C /* SC_Lock.h */,
+				189CAC021B8C503100B8F92C /* SC_Prototypes.h */,
+				189CAC031B8C503100B8F92C /* SC_Samp.h */,
+				189CAC041B8C503100B8F92C /* SC_SequencedCommand.h */,
+				189CAC051B8C503100B8F92C /* SC_Str4.h */,
+				189CAC061B8C503100B8F92C /* SC_SyncCondition.h */,
+				189CAC071B8C503100B8F92C /* SC_SynthDef.h */,
+				189CAC081B8C503100B8F92C /* SC_UnitDef.h */,
+				189CAC091B8C503100B8F92C /* SC_UnitSpec.h */,
+				189CAC0A1B8C503100B8F92C /* SC_WireSpec.h */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		189CAC0B1B8C503100B8F92C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				189CAC0C1B8C503100B8F92C /* libscsynth.a */,
+				189CAC0D1B8C503100B8F92C /* libsndfile.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		189CAC0E1B8C503100B8F92C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				189CAC0F1B8C503100B8F92C /* ofxSuperColliderServer.cpp */,
+				189CAC101B8C503100B8F92C /* ofxSuperColliderServer.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */ = {
@@ -894,30 +1035,6 @@
 			name = Shapes;
 			sourceTree = "<group>";
 		};
-		7342C297F5B419DE75CC93A2 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				0ADFA341B55572CA278BF2B2 /* dfftlib.h */,
-				518B5A59525A9E587383EF22 /* fftlib.h */,
-				2A23F606E73DA31B92D98CE3 /* SC_AllocPool.h */,
-				7CDEA0A597723030A9B811BF /* SC_Altivec.h */,
-				4B2BF62FB156FBA5BB912A64 /* SC_DirUtils.h */,
-				EB6084CBD7F074095E7ECE2D /* SC_Endian.h */,
-				3834335DE4CCC3D4F3C0668E /* SC_fftlib.h */,
-				EA198E0A3253189ECD26BDFB /* SC_FIFO.h */,
-				DA5E5CA19728E0743448432A /* sc_popen.h */,
-				5BA58DA52C7C58929453E0D2 /* SC_Reply.h */,
-				3EDC245B14749BBF690C6ECD /* SC_Sem.h */,
-				FEEA5AE3AE5CA5348318866C /* SC_StandAloneInfo_Darwin.h */,
-				66ED56EE16D0EC260DC34C37 /* SC_StringBuffer.h */,
-				5FF571B316F466D3A2D2B5C6 /* SC_StringParser.h */,
-				C70BB0BE791A33F9317D06A2 /* SC_VFP11.h */,
-				9500AF24F83229803ECCE087 /* SC_Win32Utils.h */,
-				2A5FB3A96F17A3FD6401C28E /* scsynthsend.h */,
-			);
-			name = common;
-			sourceTree = "<group>";
-		};
 		86D2677079A3AF4A5A88E29A /* oscpack */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,37 +1074,6 @@
 			name = Joints;
 			sourceTree = "<group>";
 		};
-		98F60BBD8DDC7956C4F87F1F /* plugin_interface */ = {
-			isa = PBXGroup;
-			children = (
-				71D0486FA47FFDDB6C93F63B /* clz.h */,
-				5621CB50DA42B40670E536DB /* Hash.h */,
-				464884828E9977C76957995A /* SC_BoundsMacros.h */,
-				F715780C67F2BDE6EF4DC3C7 /* SC_BufGen.h */,
-				8E77739C15F160B7DF7E2309 /* SC_Constants.h */,
-				064255B674154059953FBB26 /* SC_DemandUnit.h */,
-				087B714D2D9BE742EB897592 /* SC_FifoMsg.h */,
-				36DD5C617BFB0E5A54E910F0 /* SC_Graph.h */,
-				B9DF8DDF4231DBF0EFF4855E /* SC_InlineBinaryOp.h */,
-				499B9335A7586D43749C7ECE /* SC_InlineUnaryOp.h */,
-				0C793CEE3B4E556C3F17653B /* SC_InterfaceTable.h */,
-				5170833316F31264812070E4 /* sc_msg_iter.h */,
-				065DC04CDCF1F0F77E8EF9DF /* SC_Node.h */,
-				4F79D6ABFAD622FDA08BFED7 /* SC_PlugIn.h */,
-				2D76639CF3DA0FA822F4B3FE /* SC_Rate.h */,
-				2803539D8D96A7027D6F47D9 /* SC_RGen.h */,
-				5335C90F73DD2350A1238004 /* SC_SndBuf.h */,
-				D0D831C31A7F7394AD4607B3 /* SC_sndfile_stub.h */,
-				EA7CFAF7736346A4A0C01772 /* SC_Types.h */,
-				F96BABB60AB8ED6F45FEED86 /* SC_Unit.h */,
-				0515A89BD0974F0ED1B4A5ED /* SC_Wire.h */,
-				18821ED6AA2B03D0D6A1028F /* SC_World.h */,
-				089C4B3EB93BD211DA64BE85 /* SC_WorldOptions.h */,
-				05BB5E29679C8DA7ABB2F039 /* Unroll.h */,
-			);
-			name = plugin_interface;
-			sourceTree = "<group>";
-		};
 		9DBC3F5A51BD11C17FEB021B /* ofxLiquidFun */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,15 +1081,6 @@
 				C950C8B53D17E809695A1AE9 /* libs */,
 			);
 			name = ofxLiquidFun;
-			sourceTree = "<group>";
-		};
-		9E6C3A454DAC321795AB69D5 /* ofxSuperColliderServer_dist */ = {
-			isa = PBXGroup;
-			children = (
-				1E24A7AF6FEAAEA483F4779A /* src */,
-				B0658703E58A7E4D671BC8D8 /* libs */,
-			);
-			name = ofxSuperColliderServer_dist;
 			sourceTree = "<group>";
 		};
 		A1ACC71ED3C83F297430F44D /* Box2D */ = {
@@ -1025,16 +1102,6 @@
 				D60F85FE32E11F4003B80627 /* src */,
 			);
 			name = ofxUI;
-			sourceTree = "<group>";
-		};
-		A809EA61B5398FB696D1F116 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7342C297F5B419DE75CC93A2 /* common */,
-				98F60BBD8DDC7956C4F87F1F /* plugin_interface */,
-				D953B84EA7196786266059D9 /* server */,
-			);
-			name = include;
 			sourceTree = "<group>";
 		};
 		A96A0983004ABFD9CB521E9F /* Collision */ = {
@@ -1114,14 +1181,6 @@
 			name = src;
 			sourceTree = "<group>";
 		};
-		B0658703E58A7E4D671BC8D8 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				C7B5A5D9D165934D8F508B6C /* supercollider */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
 		BA6760AC87647DD61A92BD41 /* win32 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1140,7 +1199,7 @@
 				9DBC3F5A51BD11C17FEB021B /* ofxLiquidFun */,
 				BD52EC6DCE402D90869A80A1 /* ofxPostProcessing */,
 				2E834CF5F4C2C9482715C8D8 /* ofxSuperCollider */,
-				9E6C3A454DAC321795AB69D5 /* ofxSuperColliderServer_dist */,
+				189CABAB1B8C503100B8F92C /* ofxSuperColliderServer */,
 				A492CE86424AB8905550BFD8 /* ofxUI */,
 			);
 			name = addons;
@@ -1228,14 +1287,6 @@
 				63D2DB1CAE111F8F0A453C69 /* ofxLiquidFun.h */,
 			);
 			name = src;
-			sourceTree = "<group>";
-		};
-		C7B5A5D9D165934D8F508B6C /* supercollider */ = {
-			isa = PBXGroup;
-			children = (
-				A809EA61B5398FB696D1F116 /* include */,
-			);
-			name = supercollider;
 			sourceTree = "<group>";
 		};
 		C950C8B53D17E809695A1AE9 /* libs */ = {
@@ -1377,40 +1428,6 @@
 				5E62D62D32EFCA8D05DDAD1A /* ofxUIWrapper.h */,
 			);
 			name = src;
-			sourceTree = "<group>";
-		};
-		D953B84EA7196786266059D9 /* server */ = {
-			isa = PBXGroup;
-			children = (
-				973781E4D417B4D3A0474565 /* HashTable.h */,
-				70FDE43CEFE83AF7EDC48842 /* MsgFifo.h */,
-				75B9BE4387BB95C552CDEFA8 /* OSC_Packet.h */,
-				315E6B2D88BF913E9548A150 /* PriorityQueue.h */,
-				6631D396B605A4BADFE86217 /* ReadWriteMacros.h */,
-				4CF4D1665B52F5CCC505725B /* Rendezvous.h */,
-				1DB0C638B96B3D3D65D936D7 /* SC_AU.h */,
-				F9FB9B38607F7D4B67C6A4D5 /* SC_Complex.h */,
-				7E788CD6944983A5E378BC45 /* SC_ComPort.h */,
-				0644BF2D8ABCACAA56C1F6A2 /* SC_CoreAudio.h */,
-				2CCD2ABE67D7C21A39A12B34 /* SC_Errors.h */,
-				5D47F7981F8A7DF282760883 /* SC_GraphDef.h */,
-				718BE37ECE033CEF664C2D89 /* SC_Group.h */,
-				18E1040640AF7EF5B4002D07 /* SC_HiddenWorld.h */,
-				C122640389835CFA3724C028 /* SC_Lib.h */,
-				5EA815C9F137DA431FC3E0D9 /* SC_Lib_Cintf.h */,
-				393CBF31696396A024A654D7 /* SC_List.h */,
-				26821B41051DABD2C63EACDE /* SC_Lock.h */,
-				9431BE58EAFD96E228577230 /* SC_Prototypes.h */,
-				23FD85C382282B466D1C1833 /* SC_Samp.h */,
-				A52816F075D1B5C28D0BDA16 /* SC_SequencedCommand.h */,
-				6F8C78899985B22162F4ADE6 /* SC_Str4.h */,
-				21EE2AD5D81F47C840EDE4C4 /* SC_SyncCondition.h */,
-				9404A2A42C85374257B5C1BA /* SC_SynthDef.h */,
-				D447524045189CA4FFAD4D96 /* SC_UnitDef.h */,
-				2D94C623EAAFF1F9319FDC6A /* SC_UnitSpec.h */,
-				2FCF0D033BE7FAEE667B97B6 /* SC_WireSpec.h */,
-			);
-			name = server;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -1711,6 +1728,7 @@
 				4A2B684DF41F7779B2947319 /* RimHighlightingPass.cpp in Sources */,
 				4355FD81C3F9DDE40B10CE94 /* SSAOPass.cpp in Sources */,
 				813E52BD790CE4AAF527DCD4 /* ToonPass.cpp in Sources */,
+				189CAC151B8C503100B8F92C /* ofxSuperColliderServer.cpp in Sources */,
 				898CB0955CB42FEB5D750A5C /* VerticalTiltShifPass.cpp in Sources */,
 				D752EB8BA905C25F5E7F2B30 /* ZoomBlurPass.cpp in Sources */,
 				EBB8288FD606C26DEDC99CED /* ofxSCBuffer.cpp in Sources */,
@@ -1720,7 +1738,6 @@
 				18CB16E9947C4281DF428573 /* ofxSCResourceAllocator.cpp in Sources */,
 				9886A45FECEEC9EF860EF6C6 /* ofxSCServer.cpp in Sources */,
 				5E5ABC8F3876CF57036C2E44 /* ofxSCSynth.cpp in Sources */,
-				DD088E932400B4089093A4D4 /* ofxSuperColliderServer.cpp in Sources */,
 				9F5C6DD965B4F3A6DB5B88F8 /* ofxUI2DGraph.cpp in Sources */,
 				4B3ED367CA852D522E2EE996 /* ofxUI2DPad.cpp in Sources */,
 				F1E8DE8734BA6F69A5112FA8 /* ofxUIBaseDraws.cpp in Sources */,
@@ -1937,6 +1954,41 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxOsc/libs,
+					../../../addons/ofxOsc/libs/oscpack,
+					../../../addons/ofxOsc/libs/oscpack/src,
+					../../../addons/ofxOsc/libs/oscpack/src/ip,
+					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../addons/ofxOsc/libs/oscpack/src/osc,
+					../../../addons/ofxOsc/src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
+					../../../addons/ofxGLSLSimplexNoise/libs,
+					../../../addons/ofxGLSLSimplexNoise/src,
+					../../../addons/ofxLiquidFun/libs,
+					../../../addons/ofxLiquidFun/libs/Box2D,
+					../../../addons/ofxLiquidFun/libs/Box2D/Collision,
+					../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes,
+					../../../addons/ofxLiquidFun/libs/Box2D/Common,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints,
+					../../../addons/ofxLiquidFun/libs/Box2D/Particle,
+					../../../addons/ofxLiquidFun/libs/Box2D/Rope,
+					../../../addons/ofxLiquidFun/libs/triangle,
+					../../../addons/ofxLiquidFun/src,
+					../../../addons/ofxPostProcessing/libs,
+					../../../addons/ofxPostProcessing/src,
+					../../../addons/ofxSuperCollider/libs,
+					../../../addons/ofxSuperCollider/src,
+					"../../../addons/ofxSuperColliderServer_dist/libs/**",
+					"../../../addons/ofxSuperColliderServer_dist/src/**",
+					../../../addons/ofxUI/libs,
+					../../../addons/ofxUI/src,
+				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -2004,6 +2056,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					/Users/tado/Documents/of_v0.8.4_osx_release/addons/ofxSuperColliderServer/libs/supercollider/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -2022,6 +2075,41 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxOsc/libs,
+					../../../addons/ofxOsc/libs/oscpack,
+					../../../addons/ofxOsc/libs/oscpack/src,
+					../../../addons/ofxOsc/libs/oscpack/src/ip,
+					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../../addons/ofxOsc/libs/oscpack/src/osc,
+					../../../addons/ofxOsc/src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
+					../../../addons/ofxGLSLSimplexNoise/libs,
+					../../../addons/ofxGLSLSimplexNoise/src,
+					../../../addons/ofxLiquidFun/libs,
+					../../../addons/ofxLiquidFun/libs/Box2D,
+					../../../addons/ofxLiquidFun/libs/Box2D/Collision,
+					../../../addons/ofxLiquidFun/libs/Box2D/Collision/Shapes,
+					../../../addons/ofxLiquidFun/libs/Box2D/Common,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Contacts,
+					../../../addons/ofxLiquidFun/libs/Box2D/Dynamics/Joints,
+					../../../addons/ofxLiquidFun/libs/Box2D/Particle,
+					../../../addons/ofxLiquidFun/libs/Box2D/Rope,
+					../../../addons/ofxLiquidFun/libs/triangle,
+					../../../addons/ofxLiquidFun/src,
+					../../../addons/ofxPostProcessing/libs,
+					../../../addons/ofxPostProcessing/src,
+					../../../addons/ofxSuperCollider/libs,
+					../../../addons/ofxSuperCollider/src,
+					"../../../addons/ofxSuperColliderServer_dist/libs/**",
+					"../../../addons/ofxSuperColliderServer_dist/src/**",
+					../../../addons/ofxUI/libs,
+					../../../addons/ofxUI/src,
+				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -2089,6 +2177,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					/Users/tado/Documents/of_v0.8.4_osx_release/addons/ofxSuperColliderServer/libs/supercollider/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

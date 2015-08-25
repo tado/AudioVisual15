@@ -4,6 +4,7 @@
 #include "PerlinPlane.h"
 #include "ofxPostProcessing.h"
 #include "ofxSuperCollider.h"
+#include "ofxSuperColliderServer.h"
 #include "SawSynth.h"
 #include "Blink.h"
 
@@ -33,7 +34,7 @@ public:
     ofxPostProcessing *post;
     BloomPass::Ptr bloom;
     
-    static const int PERLIN_NUM = 3;
+    static const int PERLIN_NUM = 4;
     deque <shared_ptr<PerlinPlane> > perlins;
     shared_ptr<ofxSCSynth> fx;
     shared_ptr<ofxSCSynth> rhythm;
