@@ -23,7 +23,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -71,6 +71,11 @@ void ofApp::drawSaw(){
 }
 
 void ofApp::drawBlinks(){
+    if (blinks.size() > 1) {
+        while (blinks[0].get()->lived == false) {
+            blinks.pop_front();
+        }
+    }
     for (int i = 0; i < blinks.size(); i++) {
         blinks[i]->draw();
     }
@@ -128,8 +133,8 @@ void ofApp::keyPressed(int key){
         blinks.push_back(b);
     }
     if (key == 'w' && blinks.size() > 0){
-        blinks[0]->synth->free();
-        blinks.pop_front();
+        blinks[0].get()->fadeIn = false;
+        //blinks.pop_front();
     }
     if (key == '=') {
         if (rhythm != NULL) {
@@ -144,6 +149,10 @@ void ofApp::keyPressed(int key){
         }
         sawNum = 0;
         sawsynths.clear();
+        for (int i = 0; i < blinks.size(); i++) {
+            blinks[i].get()->synth->free();
+        }
+        blinks.clear();
     }
 }
 
@@ -154,17 +163,17 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
@@ -182,15 +191,15 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+    
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+void ofApp::dragEvent(ofDragInfo dragInfo){
+    
 }

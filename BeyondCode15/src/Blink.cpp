@@ -15,10 +15,27 @@ Blink::Blink(float _freq){
     startTime = ofGetElapsedTimef();
     synth = shared_ptr<ofxSCSynth>(new ofxSCSynth("blink"));
     synth.get()->create();
+    fade = 0;
+    fadeSpeed = 0.005;
+    fadeIn = true;
+    lived = true;
 }
 
 void Blink::draw(){
-    float br = abs(sin((ofGetElapsedTimef() - startTime) * freq) * 255);
+    if (fadeIn) {
+        fade += fadeSpeed;
+        if (fade > 1.0) {
+            fade = 1.0;
+        }
+    } else {
+        fade -= fadeSpeed * 2.0;
+        if (fade < 0.0) {
+            lived = false;
+            synth->free();
+        }
+    }
+    
+    float br = abs(sin((ofGetElapsedTimef() - startTime) * freq) * 255) * fade;
     synth.get()->set("amp", br / 255.0 * 0.5);
     ofSetColor(color.r, color.g, color.b, br);
     ofSetRectMode(OF_RECTMODE_CORNER);

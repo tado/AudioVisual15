@@ -16,20 +16,19 @@ SynthDef("moog", {
 SynthDef("pulse_rhythm", {
 	arg amp=0.25, freq = 18000;
 	var in1, in2, env, out1, out2, out, baseSin, sawFreq, trigOut, pan, sinOut;
-	env = Env.new([0, 1], [10.0]);
-	in1 = AllpassC.ar(SinOsc.ar([40.1, 40]).tanh,0.4,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
-	in2 = AllpassC.ar(SinOsc.ar([60, 60.1]).tanh,0.4,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
+	env = Env.new([0, 1], [60.0]);
+	in1 = AllpassC.ar(SinOsc.ar([40.1, 40]).tanh,1.0,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
+	in2 = AllpassC.ar(SinOsc.ar([60, 60.1]).tanh,1.0,TExpRand.ar(2e-4, 1.0,Impulse.ar(8.0)).round([2e-3,4e-3]),2);
 	out1 = in1 + in2;
 
-	sawFreq = 111;
-	trigOut = Trig.ar(Saw.ar(sawFreq),LFNoise1.ar(0.1, 0.5, 1.2))
-	+ Trig.ar(Saw.ar(sawFreq * 2.3),LFNoise1.ar(0.32, 0.5, 4.2))
-	+ Trig.ar(Saw.ar(sawFreq * 8.8),LFNoise1.ar(0.32, 0.5, 4.2));
-	sinOut = SinOsc.ar(trigOut * sawFreq);
-	pan = SinOsc.ar(trigOut);
-	out2 = GrainIn.ar(2, sinOut, sinOut / LFNoise1.ar([5.0, 4.0], 1.0, 1.1),pan, LFNoise1.ar(0.2), -1) + GrainIn.ar(2, sinOut, sinOut / LFNoise1.ar([3.0, 2.0], 0.5, 1.1), pan, LFNoise1.ar(0.3), -1);
+	x = 222;
+	p=Trig.ar(Saw.ar(x),LFNoise1.ar(0.1, 0.5, 1.2)) + Trig.ar(Saw.ar(x * 4.0),LFNoise1.ar(0.32, 0.5, 2.2));
+	y=SinOsc.ar(p*x);
+	z=SinOsc.ar(p);
+	out2 = GrainIn.ar(2, y, y / LFNoise1.ar([5.0, 4.0], 1.0, 1.1),z, LFNoise1.ar(0.2), -1) + GrainIn.ar(2, y, y / LFNoise1.ar([3.0, 2.0], 0.5, 1.1),z, LFNoise1.ar(0.3), -1);
 	//out2 = out2;
-	out = (Limiter.ar(out1 + out2) * EnvGen.kr(env, doneAction:0)).softclip * amp;
+	//out = (Limiter.ar(out1 + out2) * EnvGen.kr(env, doneAction:0)).softclip * amp;
+	out = (Limiter.ar(out1 + out2)).softclip * amp;
 	Out.ar(0, out);
 }).store;
 
@@ -81,7 +80,7 @@ SynthDef("blink", {
 	//out = Saw.ar([sawFreq, sawFreq * 1.01]).dup * Pulse.ar(freq, 0.1) * lfo;
 	//out = LFSaw.ar([sawFreq, sawFreq + 0.2]) + LFSaw.ar([sawFreq * 2.0, sawFreq * 2.0 - 0.2]);
 	out = Pulse.ar([sawFreq, sawFreq], 0.05) + Pulse.ar([sawFreq * 2.0, sawFreq * 2.0], 0.05);
-	out = RLPF.ar(out, LFNoise2.ar(0.5, lpf, lpf * 2), 0.5) + sinOut;
+	out = RLPF.ar(out, LFNoise2.ar(0.5, lpf, lpf * 2), 0.3) + sinOut;
 	//2.do({ out = AllpassL.ar(out, 0.2, LFNoise2.kr([rrand(0.0, 0.1),rrand(0.0, 0.1)],0.02,0.04), 0.5) });
 	//out = CompanderD.ar(out) * amp;
 	Out.ar(7, out * amp);

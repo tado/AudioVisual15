@@ -13,4 +13,8 @@ public:
     int startFrame;
     float startTime;
     shared_ptr<ofxSCSynth> synth;
+    float fade;
+    float fadeSpeed;
+    bool lived;
+    bool fadeIn;
 };
